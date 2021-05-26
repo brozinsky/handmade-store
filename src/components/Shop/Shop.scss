@@ -1,0 +1,100 @@
+.shop{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-around;
+    margin-top: 100px;
+
+    &__products{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 1040px;
+
+        &-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: space-around;
+        }
+    }
+
+    &__courses{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1020px;
+
+        &-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: space-around;
+        }
+    }
+}
+
+.product{
+    margin: 1rem 1rem;
+
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1), 0 2px 3px rgba(0,0,0,0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &__img{
+        width: 274px;
+        height: 274px;
+        margin: 0 auto;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &-container{
+
+        }
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 280px;
+
+
+        &-name{
+            margin: 0.5rem 0;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        }
+        &-row{
+
+        }
+        &-price{
+            margin: 0.5rem 0;
+
+            &-container{
+                text-align: center;
+
+            }
+        }
+        &-button{
+            margin: 0.5rem 0;
+
+        }
+    }
+}

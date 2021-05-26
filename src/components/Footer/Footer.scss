@@ -1,0 +1,35 @@
+$main-light: #F7DFDE;
+$main-shaded: #BE8C92;
+$main-dark: #7E696C;
+
+.footer{
+    background: $main-light;
+    width: 99vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    &__social{
+
+        &-container{
+
+        }
+    }
+
+    &__links{
+
+        &-li{
+
+        }
+    }
+
+    &__copyright{
+
+        &-small{
+            padding: 0.5rem auto;
+        }
+
+    }
+}

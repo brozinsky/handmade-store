@@ -1,0 +1,35 @@
+$main-light: #F7DFDE;
+$main-shaded: #BE8C92;
+$main-dark: #7E696C;
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $main-dark;
+}
+
+button{
+  margin: 1rem auto;
+  width: 170px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px dashed $main-dark;
+  color: $main-dark;
+  font-size: 1rem;
+  text-align: center;
+  background: transparent;
+
+  &:hover{
+    color: #111;
+    border: 1px solid #111;
+    cursor: pointer;
+  }
+}
