@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+$main-light: #F7DFDE;
+$main-shaded: #BE8C92;
+$main-dark: #7E696C;
+
+.contact{
+    margin-top: 50px;
+    max-width: 600px;
+    text-align: center;
+
+    &-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title{
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        font-weight: 400;
+        margin: 1rem 0;
+        font-family: "Architects Daughter";
+    }
+
+    &__text{
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        margin: 1rem 0;
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+    }
+
+    &__input{
+        width: 280px;
+        height: 55px;
+        font-size: 1rem;
+        border: 1px solid $main-dark;
+        background: transparent;
+        color: $main-dark;
+        margin: 3px;
+        padding-left: 10px;
+        box-shadow: none;
+        outline: none;
+        box-sizing: content-box;
+
+        @media (max-width: 768px) {
+            width: 90vw;
+            box-sizing: border-box;
+            height: 70px;
+        }
+
+        &:focus{
+            border-bottom: 4px solid $main-shaded;
+        }
+
+        &-wrap{
+            height: 60px;
+
+            @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            }
+        }
+    }
+
+    &__textarea{
+        border: 1px solid $main-dark;
+        background: transparent;
+        color: $main-dark;
+        margin: 3px;
+        font-size: 1rem;
+        margin-top: 7px;
+        padding: 10px;
+        resize: none;
+        box-shadow: none;
+        font-family: 'Rajdhani', 'Helvetica Neue',
+        sans-serif;
+        outline:none;
+
+        @media (max-width: 768px) {
+            width: 90vw;
+        }
+
+        &:focus{
+            border: 1px solid $main-dark;
+        }
+    }
+
+    &__button{
+        font-family: "Architects Daughter";
+        letter-spacing: 1px;
+    }
+}

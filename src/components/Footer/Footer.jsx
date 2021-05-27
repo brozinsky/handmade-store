@@ -16,7 +16,7 @@ const Footer = () => {
                     <a href="kontakt"> Kontakt</a></li>
             </ul>
             <div className="footer__copyright">
-                <small className="footer__copyright-small"> &copy; 20201 Wszysykie prawa zastrzeżone</small>
+                <small className="footer__copyright-small"> &copy; 20201 Wszystkie prawa zastrzeżone</small>
             </div>
 
         </footer>

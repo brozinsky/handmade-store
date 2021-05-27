@@ -1,0 +1,125 @@
+$main-light: #F7DFDE;
+$main-shaded: #BE8C92;
+$main-dark: #7E696C;
+
+.details{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    &__wrap{
+        background: #fff;
+        margin-top: 100px;
+        padding: 4rem 5rem;
+        box-shadow: 0 2px 3px rgba(0,0,0,0.1), 0 2px 3px rgba(0,0,0,0.1);
+    }
+
+    &__image{
+        margin-right: 0.5rem;
+
+        &-container{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__text{
+        max-width: 650px;
+        margin: 0.4rem 0;
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+        text-align: justify;
+
+        &-title{
+            color: $main-dark;
+            font-weight: 400;
+            font-size: 1.3rem;
+            margin: 0.4rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+    }
+
+    &__title{
+        color: $main-dark;
+        font-weight: 400;
+        font-size: 1.4rem;
+        margin: 0.7rem;
+    }
+
+    &__price{
+        color: $main-dark;
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin: 0.7rem;
+    }
+
+    &__image-small{
+        height: 100%;
+        width: 100%;
+        margin: 0.2rem;
+
+        &-container{
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            max-height: 274px;
+        }
+    }
+
+    &__info{
+
+        &-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__top{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 650px;
+        max-width: 650px;
+        margin: 0 auto;;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__input{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        max-width: 35px;
+        height: 25px;
+        margin: 0.5rem auto;
+        border: none;
+
+        &-number{
+            margin: 0 5px;
+        }
+
+        &-btn{
+            border: 1px solid $main-dark;
+            height: 20px;
+            width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            &:hover{
+                cursor:pointer;
+            }
+        }
+    }
+}

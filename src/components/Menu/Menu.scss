@@ -5,7 +5,8 @@ $main-dark: #7E696C;
 .menu{
     position: fixed;
     width: 100vw;
-    height: 80px;
+    height: 50px;
+    max-height: 50px;
     font-size: 1rem;
     font-weight: 100;
     letter-spacing: 1px;
@@ -131,6 +132,7 @@ $main-dark: #7E696C;
         flex-direction: column;
         justify-content: space-around;
         margin-top: 50px;
+        max-width: 200px;
 
         &--open{
             transform: translateX(0);
@@ -215,6 +217,7 @@ $main-dark: #7E696C;
         background:rgba(0, 0, 0, 0.85);
         transform: translateX(50vw);
         transition: 0.3s;
+        max-width: 200px;
 
         &--open{
             transform: translateX(0);
@@ -253,6 +256,7 @@ $main-dark: #7E696C;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         margin: 0 auto;
         margin-bottom: 3vh;
         max-width: 80px;
@@ -263,11 +267,10 @@ $main-dark: #7E696C;
 
         &-icon{
             display: inline-block;
-            height: 15px;
-            width: 15px;
             margin: 0.2rem;
             color: rgba(255, 255, 255, 0.486);
             transition: 0.3s;
+            margin-left: 1rem;
 
             &:hover{
                 color: #fff;
@@ -280,6 +283,11 @@ $main-dark: #7E696C;
                     color: #fff;
                     transform: translateY(50%) scale(1.4);
                 }
+            }
+
+
+            &-font{
+                color: $main-dark;
             }
         }
 

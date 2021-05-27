@@ -5,8 +5,9 @@ $main-dark: #7E696C;
 .wrapper{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  min-height: 89vh;
 }
 
 h2{
@@ -31,5 +32,20 @@ button{
     color: #111;
     border: 1px solid #111;
     cursor: pointer;
+  }
+}
+
+
+.background-item{
+  position: absolute;
+  &--1{
+      top: 0;
+      right: 0;
+
+  }
+
+  &--2{
+      bottom: 0;
+      left: 0;
   }
 }
