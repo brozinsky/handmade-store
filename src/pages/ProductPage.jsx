@@ -7,8 +7,8 @@ const ProductPage = () => {
         <>
             <section className="wrapper">
                 <Details />
+                <Footer />
             </section>
-            <Footer />
         </>
     )
 }

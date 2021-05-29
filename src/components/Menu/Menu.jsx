@@ -1,7 +1,6 @@
 import React from 'react'
 import './Menu.scss'
 import logo from '../../assets/logo.png'
-import InstagramIcon from '@material-ui/icons/Instagram'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import LocalMallIcon from '@material-ui/icons/LocalMall'
 import { Link } from "react-router-dom";
@@ -38,18 +37,13 @@ const Menu = () => {
                         <li className='menu__tabs-item'>
                             <Link to={`/kontakt`} >Kontakt</Link>
                         </li>
-                        <li className='menu__tabs-item'>
-                            <Link to={`/koszyk`} >
+                        <li className='menu__tabs-item menu__tabs-item-cart'>
+                            <Link className='menu__tabs-item-cart' to={`/koszyk`} >
                                 <LocalMallIcon />
+                                <div className="menu__tabs-item-quantity">1</div>
                             </Link>
                         </li>
                     </ul>
-                    <div className="menu__social">
-                        <a className="menu__social-icon"
-                            href="https://www.instagram.com/sznurkowe_krolowe/">
-                            <InstagramIcon className="menu__social-icon-font" />
-                        </a>
-                    </div>
                 </div>
             </div>
         </nav >

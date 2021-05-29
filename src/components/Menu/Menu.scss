@@ -33,7 +33,7 @@ $main-dark: #7E696C;
         &:before,
         &:after {
             position: absolute;
-            background: #fff;
+            background: $main-dark;
             content: '';
             width: 30px;
             height: 3px;
@@ -47,35 +47,11 @@ $main-dark: #7E696C;
             top: 12px;
         }
 
-        &--black{
-            background: #000;
-            &:before,
-            &:after {
-                background: #000;
-            }
-        }
-
-        &--white{
-            background: #fff;
-            &:before,
-            &:after {
-                background: #fff;
-            }
-        }
-
-        &--scroll{
-            background: #fff !important;
-            &:before,
-            &:after {
-                background: #fff !important;
-            }
-        }
-
         &--open{
-            background: #fff !important;
+            background: $main-dark !important;
             &:before,
             &:after {
-                background: #fff !important;
+                background: $main-dark !important;
             }
         }
 
@@ -96,21 +72,6 @@ $main-dark: #7E696C;
                 display: none;
             }
         }
-    }
-
-    &--black{
-        background-image: linear-gradient(rgba(155, 155, 155, 0.657), transparent);
-        color: #000;
-    }
-
-    &--white{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.657), transparent);
-        color: #fff;
-    }
-
-    &--scroll{
-        background: #000;
-        color: #fff !important;
     }
 
     &__wrapper{
@@ -147,10 +108,6 @@ $main-dark: #7E696C;
             color: #fff;
         }
 
-        &--scroll{
-            color: #fff !important;
-        }
-
         @media (min-width: 780px) {
             transform: translateX(0);
             flex-direction: row;
@@ -162,6 +119,27 @@ $main-dark: #7E696C;
             justify-content: space-between;
         }
 
+        &-item{
+            color: $main-dark;
+            font-weight: 300;
+
+            &-quantity{
+                border-radius: 50%;
+                text-align: center;
+                height: 15px;
+                width: 15px;
+                line-height: 12px;
+                font-size: 11px;
+                background: #fff;
+                color: #000;
+                transform: translate(15px, -12px)
+            }
+
+            &-cart{
+                height: 20px;
+            }
+        }
+
         &-container{
             display: flex;
             flex-direction: column;
@@ -171,37 +149,6 @@ $main-dark: #7E696C;
 
             @media (min-width: 780px) {
                 height: 100%;
-            }
-        }
-
-        &-arrow{
-            overflow: hidden;
-            display: inline-block;
-            width: 5px;
-            height: 5px;
-            transform: translateX(-2px) rotate(54deg) skew(20deg);
-            z-index: 2;
-            margin-top: 0.3rem;
-
-            &--scroll{
-                border-top: 2px solid #fff !important;
-                border-right: 2px solid #fff !important;
-            }
-
-            &--white{
-                border-top: 2px solid #fff;
-                border-right: 2px solid #fff;
-                }
-
-            &--black{
-                border-top: 2px solid #000;
-                border-right: 2px solid #000;
-            }
-
-            &-container{
-                transform: rotate(90deg);
-                width: 5px;
-                align-self: center;
             }
         }
     }
@@ -247,50 +194,8 @@ $main-dark: #7E696C;
     &__logo{
         transform: scale(0.6);
         @media (min-width: 780px) {
-            transform: scale(1);
+            transform: scale(0.8);
         }
-    }
-
-    &__social{
-        height: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        margin-bottom: 3vh;
-        max-width: 80px;
-
-        @media (min-width: 780px) {
-            margin: 0;
-        }
-
-        &-icon{
-            display: inline-block;
-            margin: 0.2rem;
-            color: rgba(255, 255, 255, 0.486);
-            transition: 0.3s;
-            margin-left: 1rem;
-
-            &:hover{
-                color: #fff;
-                transform: scale(1.4);
-            }
-
-            &--push{
-                transform: translateY(50%);
-                &:hover{
-                    color: #fff;
-                    transform: translateY(50%) scale(1.4);
-                }
-            }
-
-
-            &-font{
-                color: $main-dark;
-            }
-        }
-
     }
 
     &__dropdown{

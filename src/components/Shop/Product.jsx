@@ -1,15 +1,14 @@
 import React from 'react'
 import AddToCartButton from './AddToCartButton'
-import defaultImg from '../../assets/product-default.png'
 import './Shop.scss';
 import { Link } from "react-router-dom"
 
-const Product = ({ category, imgUrl, name, price, sale, id, isOnSale, isNew }) => {
+const Product = ({ imgUrl, name, price, sale, id, isOnSale, isNew }) => {
 
     return (
         <div className="product">
             <Link to={`/sklep/${id}`} className="product__img-container">
-                <img className="product__img" src={defaultImg} alt="Product" />
+                <img className="product__img" src={`/img/${imgUrl}`} alt={name} />
                 <div
                     className={
                         isOnSale ? 'icon icon--sale' : ''

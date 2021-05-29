@@ -54,6 +54,59 @@ $main-dark: #7E696C;
         margin: 0.7rem;
     }
 
+    &__color{
+        width: 20px;
+        height: 20px;
+        background: #000;
+
+        &-wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: space-around;
+            width: 60%;
+            margin: 0.5rem;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &--1D1F2A{
+            background: #1D1F2A;
+        }
+        &--A2BDE6{
+            background: #A2BDE6;
+        }
+        &--E6E0D2{
+            background: #E6E0D2;
+        }
+
+        &--EAD1BB{
+            background: #EAD1BB;
+        }
+        &--9C9798{
+            background: #9C9798;
+        }
+        &--A49085{
+            background: #A49085;
+        }
+
+        &--F0A640{
+            background: #F0A640;
+        }
+        &--1EA0AA{
+            background: #1EA0AA;
+        }
+
+        &--E1B7D3{
+            background: #E1B7D3;
+        }
+        &--380605{
+            background: #380605;
+        }
+    }
+
     &__image-small{
         height: 100%;
         width: 100%;
@@ -110,8 +163,9 @@ $main-dark: #7E696C;
 
         &-btn{
             border: 1px solid $main-dark;
-            height: 20px;
-            width: 20px;
+            padding: 0.3rem;
+            height: 17px;
+            width: 17px;
             display: flex;
             align-items: center;
             justify-content: center;

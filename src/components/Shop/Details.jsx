@@ -1,5 +1,4 @@
 import React from 'react'
-import defaultImg from '../../assets/product-default.png'
 import './Details.scss'
 import { useParams } from "react-router-dom"
 import { productsData } from "../../data/productsData"
@@ -8,6 +7,8 @@ import AddToCartButton from './AddToCartButton'
 const Details = () => {
     const { id } = useParams()
     const currentProduct = productsData.find(item => item.id === id)
+    console.log(currentProduct)
+    console.log(currentProduct)
 
     return (
         <div className="details__wrap">
@@ -15,12 +16,13 @@ const Details = () => {
                 <div className="details__top">
                     <div className="details__image-container">
                         <div className="details__image">
-                            <img className="product__img" src={defaultImg} alt="Product" />
+                            <img className="product__img" src={`/img/${currentProduct.img1}`} alt="Product" />
                         </div>
                         <div className="details__image-small-container">
-                            <img className="details__image-small" src={defaultImg} alt="Product" />
-                            <img className="details__image-small" src={defaultImg} alt="Product" />
-                            <img className="details__image-small" src={defaultImg} alt="Product" />
+                            <img className="details__image-small"
+                                src={`/img/${currentProduct.img2}`} alt="Product" />
+                            <img className="details__image-small" src={`/img/${currentProduct.img3}`} alt="Product" />
+                            <img className="details__image-small" src={`/img/${currentProduct.img4}`} alt="Product" />
                         </div>
                     </div>
                     <div className="details__info-container">
@@ -30,6 +32,9 @@ const Details = () => {
                             <button className="details__input-btn">-</button>
                             <span className="details__input-number">1</span>
                             <button className="details__input-btn">+</button>
+                        </div>
+                        <div className="details__color-wrapper">
+                            {currentProduct.colors.map((color) => { return <div className={`details__color details__color--${color}`}></div> })}
                         </div>
                         <AddToCartButton />
                     </div>

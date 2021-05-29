@@ -8,7 +8,6 @@ const Contact = () => {
             <ContactInfo />
             <ContactForm />
         </section>
-
     )
 }
 

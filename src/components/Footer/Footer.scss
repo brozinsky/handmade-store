@@ -11,14 +11,51 @@ $main-dark: #7E696C;
     margin: 0 auto;
     margin-top: 2rem;
 
+    &__container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 800px;
+    }
+
+    &__logo{
+
+        &-img{
+            height: 70px;
+        }
+
+        &-container{
+            border: 1px dashed $main-dark;
+        }
+
+    }
+
     &__social{
 
         &-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $main-dark;
+        }
 
+        &-span{
+
+        }
+
+        &-icon{
+            color: $main-dark;
+            align-items: center;
+            margin-bottom: 0.7rem;
+            margin-right: 0.3rem;
+            transform: scale(1.4);
         }
     }
 
     &__links{
+        display: flex;
+        flex-direction: column;
 
         &-li{
 
@@ -26,10 +63,21 @@ $main-dark: #7E696C;
     }
 
     &__copyright{
+        margin-bottom: 0.5rem;
 
         &-small{
             padding: 0.5rem auto;
         }
 
+    }
+
+    &__hr{
+        width: 90vh;
+        background: $main-dark;
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: transparent;
+        padding: 0;
     }
 }
