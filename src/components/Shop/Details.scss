@@ -45,6 +45,7 @@ $main-dark: #7E696C;
         font-weight: 400;
         font-size: 1.4rem;
         margin: 0.7rem;
+        text-align: center;
     }
 
     &__price{
@@ -57,53 +58,21 @@ $main-dark: #7E696C;
     &__color{
         width: 20px;
         height: 20px;
-        background: #000;
+        margin: 0.2rem;
+        border: solid 1px #222;
 
         &-wrapper{
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content: space-around;
             align-items: space-around;
-            width: 60%;
+            max-width: 60%;
             margin: 0.5rem;
         }
 
         &:hover{
             cursor: pointer;
-        }
-
-        &--1D1F2A{
-            background: #1D1F2A;
-        }
-        &--A2BDE6{
-            background: #A2BDE6;
-        }
-        &--E6E0D2{
-            background: #E6E0D2;
-        }
-
-        &--EAD1BB{
-            background: #EAD1BB;
-        }
-        &--9C9798{
-            background: #9C9798;
-        }
-        &--A49085{
-            background: #A49085;
-        }
-
-        &--F0A640{
-            background: #F0A640;
-        }
-        &--1EA0AA{
-            background: #1EA0AA;
-        }
-
-        &--E1B7D3{
-            background: #E1B7D3;
-        }
-        &--380605{
-            background: #380605;
         }
     }
 

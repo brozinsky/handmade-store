@@ -33,8 +33,9 @@ const Details = () => {
                             <span className="details__input-number">1</span>
                             <button className="details__input-btn">+</button>
                         </div>
+                        Dostępne kolory:
                         <div className="details__color-wrapper">
-                            {currentProduct.colors.map((color) => { return <div className={`details__color details__color--${color}`}></div> })}
+                            {currentProduct.colors.map((color) => { return <div style={{ background: `#${color}` }} className={`details__color details__color--${color}`}></div> })}
                         </div>
                         <AddToCartButton />
                     </div>

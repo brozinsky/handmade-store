@@ -7,8 +7,8 @@ import { ReactComponent as Bcg2 } from '../assets/bcg-2.svg'
 const ShopPage = () => {
     return (
         <>
-            <Bcg1 className="background-item background-item--1" />
-            <Bcg2 className="background-item background-item--2" />
+            {/* <Bcg1 className="background-item background-item--1" /> */}
+            {/* <Bcg2 className="background-item background-item--2" /> */}
             <div className="wrapper">
                 <Shop />
                 <Footer />
