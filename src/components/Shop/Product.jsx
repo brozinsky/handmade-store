@@ -8,7 +8,7 @@ const Product = ({ imgUrl, name, price, sale, id, isOnSale, isNew }) => {
     return (
         <div className="product">
             <Link to={`/sklep/${id}`} className="product__img-container">
-                <img className="product__img" src={`/img/${imgUrl}`} alt={name} />
+                <img className="product__img" src={`./img/${imgUrl}`} alt={name} />
                 <div
                     className={
                         isOnSale ? 'icon icon--sale' : ''

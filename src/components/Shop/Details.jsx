@@ -16,13 +16,13 @@ const Details = () => {
                 <div className="details__top">
                     <div className="details__image-container">
                         <div className="details__image">
-                            <img className="product__img" src={`/img/${currentProduct.img1}`} alt="Product" />
+                            <img className="product__img" src={`./img/${currentProduct.img1}`} alt="Product" />
                         </div>
                         <div className="details__image-small-container">
                             <img className="details__image-small"
                                 src={`/img/${currentProduct.img2}`} alt="Product" />
-                            <img className="details__image-small" src={`/img/${currentProduct.img3}`} alt="Product" />
-                            <img className="details__image-small" src={`/img/${currentProduct.img4}`} alt="Product" />
+                            <img className="details__image-small" src={`./img/${currentProduct.img3}`} alt="Product" />
+                            <img className="details__image-small" src={`./img/${currentProduct.img4}`} alt="Product" />
                         </div>
                     </div>
                     <div className="details__info-container">
