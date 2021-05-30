@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/handmade-store/static/css/main.8b73087a.chunk.css",
+    "main.js": "/handmade-store/static/js/main.d9e5e423.chunk.js",
+    "main.js.map": "/handmade-store/static/js/main.d9e5e423.chunk.js.map",
+    "runtime-main.js": "/handmade-store/static/js/runtime-main.21a9743b.js",
+    "runtime-main.js.map": "/handmade-store/static/js/runtime-main.21a9743b.js.map",
+    "static/js/2.158cc9b2.chunk.js": "/handmade-store/static/js/2.158cc9b2.chunk.js",
+    "static/js/2.158cc9b2.chunk.js.map": "/handmade-store/static/js/2.158cc9b2.chunk.js.map",
+    "static/js/3.a88d9896.chunk.js": "/handmade-store/static/js/3.a88d9896.chunk.js",
+    "static/js/3.a88d9896.chunk.js.map": "/handmade-store/static/js/3.a88d9896.chunk.js.map",
+    "index.html": "/handmade-store/index.html",
+    "static/css/main.8b73087a.chunk.css.map": "/handmade-store/static/css/main.8b73087a.chunk.css.map",
+    "static/js/2.158cc9b2.chunk.js.LICENSE.txt": "/handmade-store/static/js/2.158cc9b2.chunk.js.LICENSE.txt",
+    "static/media/bcg-1.37916696.svg": "/handmade-store/static/media/bcg-1.37916696.svg",
+    "static/media/bcg-2.4915bba9.svg": "/handmade-store/static/media/bcg-2.4915bba9.svg",
+    "static/media/zigzag.ebbc991f.svg": "/handmade-store/static/media/zigzag.ebbc991f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21a9743b.js",
+    "static/js/2.158cc9b2.chunk.js",
+    "static/css/main.8b73087a.chunk.css",
+    "static/js/main.d9e5e423.chunk.js"
+  ]
+}
