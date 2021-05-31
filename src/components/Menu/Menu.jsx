@@ -1,9 +1,16 @@
 import React from 'react'
 import './Menu.scss'
 import logo from '../../assets/logo.png'
-import FacebookIcon from '@material-ui/icons/Facebook'
 import LocalMallIcon from '@material-ui/icons/LocalMall'
 import { Link } from "react-router-dom";
+
+const menuItems = [
+    { name: 'Home', linkTo: `/sklep` },
+    { name: 'Sklep', linkTo: `/sklep` },
+    { name: 'Kontakt', linkTo: `/kontakt` },
+    { name: 'O mnie', linkTo: `/o-mnie` },
+
+]
 
 const Menu = () => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -31,12 +38,11 @@ const Menu = () => {
                 ${isOpen ? 'menu__container--open' : ''}`}>
                     <ul className={`menu__tabs
                         ${isOpen ? 'menu__tabs--open' : ''}`}>
-                        <li className='menu__tabs-item'>
-                            <Link to={`/sklep`} >Sklep</Link>
-                        </li>
-                        <li className='menu__tabs-item'>
-                            <Link to={`/kontakt`} >Kontakt</Link>
-                        </li>
+                        {menuItems.map(({ linkTo, name }) => {
+                            return <li className='menu__tabs-item'>
+                                <Link to={linkTo} >{name}</Link>
+                            </li>
+                        })}
                         <li className='menu__tabs-item menu__tabs-item-cart'>
                             <Link className='menu__tabs-item-cart' to={`/koszyk`} >
                                 <LocalMallIcon />

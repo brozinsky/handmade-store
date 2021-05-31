@@ -1,0 +1,147 @@
+$main-light: #F7DFDE;
+$main-shaded: #BE8C92;
+$main-dark: #7E696C;
+
+$white-disabled: rgba(255, 255, 255, 0.7);
+
+
+.logo-big{
+    margin-top: 70px;
+
+    &__image{
+        max-width: 1020px;
+    }
+}
+
+.carousel{
+    margin-top: 5px;
+    position: relative;
+
+    &__info{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #fff;
+        transform: translate(-50%, -50%);
+        height: 12rem;
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-title{
+            max-width: 65%;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 0.5rem;
+            font-family: 'Architects Daughter';
+            text-transform: capitalize;
+            font-size: 2rem;
+        }
+
+        &-text{
+            max-width: 65%;
+            text-align: center;
+            font-size: 1.4rem;
+            margin: 0;
+        }
+    }
+
+
+    &__button{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $white-disabled;
+        height: 5rem;
+        border-radius: 50%;
+        border: 1px solid $white-disabled;
+        width: 2.2rem;
+        height: 2.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            cursor: pointer;
+            border: 1px solid #fff;
+            color: #fff;
+
+        }
+
+        &--right{
+            right: 0.4rem;
+        }
+
+        &--left{
+            left: 0.4rem;
+        }
+    }
+
+    &__panel{
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 150px;
+
+        &-item{
+            border-radius: 50%;
+            border: 1px solid $white-disabled;
+            width: 10px;
+            height: 10px;
+
+            &--active{
+                background: $white-disabled;
+                &:hover{
+                    background: #fff;
+                }
+            }
+
+            &:hover{
+                cursor: pointer;
+                border: 1px solid #fff;
+            }
+        }
+    }
+
+    &__image{
+        max-width: 1020px;
+
+    }
+}
+
+.category{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__item{
+        display: flex;
+        flex-direction: row;
+        margin: 1rem 0;
+        max-height: 150px;
+        max-width: 300px;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &-logo{
+
+            &-wrap{
+                width: 150px;
+                height: 150px;
+                background: $main-light;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
