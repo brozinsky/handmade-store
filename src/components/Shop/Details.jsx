@@ -7,8 +7,6 @@ import AddToCartButton from './AddToCartButton'
 const Details = () => {
     const { id } = useParams()
     const currentProduct = productsData.find(item => item.id === id)
-    console.log(currentProduct)
-    console.log(currentProduct)
 
     return (
         <div className="details__wrap">

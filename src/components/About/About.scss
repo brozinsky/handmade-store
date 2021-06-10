@@ -6,24 +6,35 @@ $main-shaded: #BE8C92;
 $main-dark: #7E696C;
 
 .about{
-    max-width: 600px;
+    max-width: 90vw;
     text-align: center;
 
+    @media (min-width: 780px) {
+        max-width: 600px;
+    }
+
     &__title{
-        font-size: 1.8rem;
         line-height: 2rem;
         font-weight: 400;
         margin: 1rem 0;
         font-family: 'Amita',"Architects Daughter", "sans-serif";
         text-transform: none;
         color: $main-shaded;
+        font-size: 1.3rem;
 
+        @media (min-width: 780px) {
+            font-size: 1.5rem;
+        }
     }
 
     &__text{
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         line-height: 1.7rem;
         margin: 1rem 0;
         color: $main-dark;
+
+        @media (min-width: 780px) {
+            font-size: 1.3rem;
+        }
     }
 }

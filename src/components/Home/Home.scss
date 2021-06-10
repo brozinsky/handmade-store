@@ -9,13 +9,24 @@ $white-disabled: rgba(255, 255, 255, 0.7);
     margin-top: 15px;
 
     &__image{
-        max-width: 1020px;
+        max-width: 100vw;
+
+        @media (min-width: 780px) {
+            max-width: 1020px;
+        }
     }
+
 }
 
 .carousel{
     margin-top: 5px;
     position: relative;
+    max-width: 100vw;
+
+    @media (min-width: 780px) {
+        flex-direction: row;
+    }
+
 
     &__info{
         position: absolute;
@@ -23,28 +34,43 @@ $white-disabled: rgba(255, 255, 255, 0.7);
         left: 50%;
         background: #fff;
         transform: translate(-50%, -50%);
-        height: 12rem;
-        width: 30rem;
+        width: 90vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 1rem 0;
+
+        @media (min-width: 780px) {
+            max-width: 30rem;
+            height: 12rem;
+        }
 
         &-title{
-            max-width: 65%;
+            max-width: 85%;
             text-align: center;
             margin: 0;
             margin-bottom: 0.5rem;
             font-family: 'Architects Daughter';
             text-transform: capitalize;
-            font-size: 2rem;
+            font-size: 1.4rem;
+
+            @media (min-width: 780px) {
+                font-size: 2rem;
+                max-width: 65%;
+            }
         }
 
         &-text{
-            max-width: 65%;
+            max-width: 85%;
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 1rem;
             margin: 0;
+
+            @media (min-width: 780px) {
+                font-size: 1.4rem;
+                max-width: 65%;
+            }
         }
     }
 
@@ -110,15 +136,23 @@ $white-disabled: rgba(255, 255, 255, 0.7);
     }
 
     &__image{
-        max-width: 1020px;
+        max-width: 100vw;
 
+        @media (min-width: 780px) {
+            max-width: 1020px;
+        }
     }
 }
 
 .category{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: 780px) {
+        flex-direction: row;
+    }
 
     &__item{
         display: flex;

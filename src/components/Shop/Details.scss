@@ -9,9 +9,16 @@ $main-dark: #7E696C;
 
     &__wrap{
         background: #fff;
-        margin-top: 100px;
-        padding: 4rem 5rem;
+        margin-top: 60px;
+        box-sizing: border-box;
+        padding: 1rem;
         box-shadow: 0 2px 3px rgba(0,0,0,0.1), 0 2px 3px rgba(0,0,0,0.1);
+        max-width: 100vw;
+
+        @media (min-width: 780px) {
+            padding: 4rem 5rem;
+            margin-top: 100px;
+        }
     }
 
     &__image{
@@ -19,16 +26,26 @@ $main-dark: #7E696C;
 
         &-container{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+
+            @media (min-width: 780px) {
+                flex-direction: row;
+            }
         }
     }
 
     &__text{
-        max-width: 650px;
+        max-width: 90vw;
+        align-self: center;
         margin: 0.4rem 0;
         font-size: 1.2rem;
         letter-spacing: 0.5px;
-        text-align: justify;
+        text-align: center;
+
+        @media (min-width: 780px) {
+            max-width: 650px;
+            text-align: justify;
+        }
 
         &-title{
             color: $main-dark;
@@ -37,6 +54,12 @@ $main-dark: #7E696C;
             margin: 0.4rem;
             margin-top: 2rem;
             text-align: center;
+            max-width: 90vw;
+            align-self: center;
+
+            @media (min-width: 780px) {
+                max-width: 100vw;
+            }
         }
     }
 
@@ -83,9 +106,15 @@ $main-dark: #7E696C;
 
         &-container{
             display: flex;
-            flex-direction: column;
-            width: 100px;
-            max-height: 274px;
+            flex-direction: row;
+            width: 274px;
+            max-height: 100px;
+
+            @media (min-width: 780px) {
+                flex-direction: column;
+                width: 100px;
+                max-height: 274px;
+            }
         }
     }
 
@@ -100,12 +129,16 @@ $main-dark: #7E696C;
 
     &__top{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        width: 650px;
         max-width: 650px;
-        margin: 0 auto;;
+        margin: 0 auto;
+
+        @media (min-width: 780px) {
+            flex-direction: row;
+            width: 650px;
+        }
     }
 
     &__form{

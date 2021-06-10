@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita&display=swap');
 
 $main-light: #F7DFDE;
 $main-shaded: #BE8C92;
@@ -15,17 +16,29 @@ $main-dark: #7E696C;
     }
 
     &__title{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 1.6rem;
         font-weight: 400;
         margin: 1rem 0;
-        font-family: "Architects Daughter";
+        font-family: "Amita";
+        color: $main-shaded;
+
+        @media (min-width: 780px) {
+            font-size: 1.5rem;
+        }
     }
 
     &__text{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         line-height: 1.6rem;
-        margin: 1rem 0;
+        margin: 1rem auto;
+        max-width: 90vw;
+        text-align: center;
+        color: $main-dark;
+
+        @media (min-width: 780px) {
+        font-size: 1.3rem;
+        }
     }
 }
 
@@ -40,7 +53,7 @@ $main-dark: #7E696C;
     @media (max-width: 768px) {
         align-items: center;
         justify-content: center;
-        width: 90vw;
+        max-width: 90vw;
     }
 
     &__input{
@@ -57,7 +70,7 @@ $main-dark: #7E696C;
         box-sizing: content-box;
 
         @media (max-width: 768px) {
-            width: 90vw;
+            max-width: 250px;
             box-sizing: border-box;
             height: 70px;
         }
@@ -94,7 +107,7 @@ $main-dark: #7E696C;
         outline:none;
 
         @media (max-width: 768px) {
-            width: 90vw;
+            max-width: 228px;
         }
 
         &:focus{

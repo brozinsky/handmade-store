@@ -8,6 +8,7 @@ $main-dark: #7E696C;
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
+  max-width: 100vw;
 }
 
 h2{
@@ -52,4 +53,8 @@ button{
 
 .white-space{
     height: 50px;
+
+    @media (min-width: 780px) {
+    height: 50px;
+  }
 }
