@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+$main-light: #F7DFDE;
+$main-shaded: #BE8C92;
+$main-dark: #7E696C;
+
+.about{
+    margin-top: 50px;
+    max-width: 600px;
+    text-align: center;
+
+    &__title{
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 400;
+        margin: 1rem 0;
+        font-family: "Architects Daughter";
+        text-transform: none;
+        color: $main-shaded;
+
+    }
+
+    &__text{
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+        margin: 1rem 0;
+        color: $main-dark;
+    }
+}
