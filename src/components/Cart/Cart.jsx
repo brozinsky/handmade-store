@@ -7,15 +7,18 @@ import './Cart.scss'
 
 const Cart = () => {
     return (
-        <section className="cart">
-            <h2 className="cart__title">Twój koszyk</h2>
-            <div className="cart__wrap">
-                <Delivery />
-                <PaymentDetails />
-                <CartDetails />
-                <Summary />
-            </div>
-        </section>
+        <>
+            <div className="white-space" />
+            <section className="cart">
+                <h2 className="cart__title">Twój koszyk</h2>
+                <div className="cart__wrap">
+                    <Delivery />
+                    <PaymentDetails />
+                    <CartDetails />
+                    <Summary />
+                </div>
+            </section>
+        </>
     )
 }
 

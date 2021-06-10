@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita&display=swap');
+
 $main-light: #F7DFDE;
 $main-shaded: #BE8C92;
 $main-dark: #7E696C;
@@ -58,7 +61,7 @@ $main-dark: #7E696C;
             align-items: center;
             color: $main-dark;
             font-weight: 300;
-
+            font-family: 'Amita';
         }
 
         &-icon{
@@ -75,10 +78,6 @@ $main-dark: #7E696C;
     &__links{
         display: flex;
         flex-direction: column;
-
-        &-li{
-
-        }
     }
 
     &__copyright{
@@ -87,7 +86,6 @@ $main-dark: #7E696C;
         &-small{
             padding: 0.5rem auto;
         }
-
     }
 
     &__hr{

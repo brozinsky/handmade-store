@@ -4,10 +4,13 @@ import ContactForm from './ContactForm'
 
 const Contact = () => {
     return (
-        <section className="contact-section">
-            <ContactInfo />
-            <ContactForm />
-        </section>
+        <>
+            <div className="white-space" />
+            <section className="contact-section">
+                <ContactInfo />
+                <ContactForm />
+            </section>
+        </>
     )
 }
 
