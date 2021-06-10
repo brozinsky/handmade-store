@@ -5,7 +5,7 @@ import LocalMallIcon from '@material-ui/icons/LocalMall'
 import { Link } from "react-router-dom";
 
 const menuItems = [
-    { name: 'Home', linkTo: `/sklep` },
+    { name: 'Home', linkTo: `/` },
     { name: 'Sklep', linkTo: `/sklep` },
     { name: 'Kontakt', linkTo: `/kontakt` },
     { name: 'O mnie', linkTo: `/o-mnie` },
