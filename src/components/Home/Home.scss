@@ -2,7 +2,7 @@ $main-light: #F7DFDE;
 $main-shaded: #BE8C92;
 $main-dark: #7E696C;
 
-$white-disabled: rgba(255, 255, 255, 0.7);
+$white-disabled: rgba(255, 255, 255, 0.83);
 
 
 .logo-big{
@@ -21,25 +21,61 @@ $white-disabled: rgba(255, 255, 255, 0.7);
 .carousel{
     margin-top: 5px;
     position: relative;
-    max-width: 100vw;
+    height: 380px;
+    overflow: hidden;
+    width: 100vw;
 
     @media (min-width: 780px) {
         flex-direction: row;
+        max-width: 1020px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1020px;
     }
 
 
     &__info{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background: #fff;
-        transform: translate(-50%, -50%);
         width: 90vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 1rem 0;
+        transition: 0.7s ease;
+        opacity: 0;
+        position: absolute;
+        color: $main-dark;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        background: rgba(255, 255, 255, 0.83);
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &--active{
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.02);
+            animation: move 5s linear infinite;
+        }
+
+        &-container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            // background: #fff;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            overflow: hidden;
+            width: 80%;
+            height: 224px;
+
+            @media (min-width: 780px) {
+                width: 440px;
+            }
+        }
 
         @media (min-width: 780px) {
             max-width: 30rem;
@@ -54,6 +90,7 @@ $white-disabled: rgba(255, 255, 255, 0.7);
             font-family: 'Architects Daughter';
             text-transform: capitalize;
             font-size: 1.4rem;
+            color: $main-shaded;
 
             @media (min-width: 780px) {
                 font-size: 2rem;
@@ -66,6 +103,8 @@ $white-disabled: rgba(255, 255, 255, 0.7);
             text-align: center;
             font-size: 1rem;
             margin: 0;
+            transition: 0.7s ease;
+            padding: 1rem;
 
             @media (min-width: 780px) {
                 font-size: 1.4rem;
@@ -77,8 +116,7 @@ $white-disabled: rgba(255, 255, 255, 0.7);
 
     &__button{
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 80%;
         color: $white-disabled;
         height: 5rem;
         border-radius: 50%;
@@ -93,7 +131,11 @@ $white-disabled: rgba(255, 255, 255, 0.7);
             cursor: pointer;
             border: 1px solid #fff;
             color: #fff;
+        }
 
+        @media (min-width: 780px) {
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         &--right{
@@ -137,9 +179,27 @@ $white-disabled: rgba(255, 255, 255, 0.7);
 
     &__image{
         max-width: 100vw;
+        transition: 0.7s ease;
+        overflow: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+        // height: 100%;
+        object-fit: cover;
+
+        &--active{
+            opacity: 1;
+            transform: translateX(-50%)  scale(1.02);
+            animation: move 5s linear infinite;
+        }
 
         @media (min-width: 780px) {
             max-width: 1020px;
+        }
+        @media (max-width: 780px) {
+            width: 100%;
         }
     }
 }
@@ -148,10 +208,18 @@ $white-disabled: rgba(255, 255, 255, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+    width: 100%;
+    max-width: 1020px;
 
     @media (min-width: 780px) {
         flex-direction: row;
+        justify-content: space-around;
+    }
+
+    @media (min-width: 1020px) {
+        justify-content: space-between;
     }
 
     &__item{
@@ -159,14 +227,25 @@ $white-disabled: rgba(255, 255, 255, 0.7);
         flex-direction: row;
         margin: 1rem 0;
         max-height: 150px;
-        max-width: 300px;
+        max-width: 100vw;
+
+        @media (min-width: 780px) {
+            max-width: 300px;
+        }
+
+        &-name{
+            text-align: center;
+            margin: 0;
+            margin-top: 1rem;
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
 
         &:hover{
             cursor: pointer;
         }
 
         &-logo{
-
             &-wrap{
                 width: 150px;
                 height: 150px;

@@ -1,6 +1,7 @@
 export const productsData = [
     {
         id: '1', name: 'Opaska 4 sploty', price: 39,
+        category: 'opaski',
         description: 'Ręcznie wykonana opaska z przędzy bawełnianej T-shirt yarn typu premium. Szerokość opaski – 3 cm. Wygodna, bezuciskowa. Róźne kolory do wyboru.',
         img1: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/opaski%2Fop-1%2Fop1-1.png?alt=media&token=7e144f8a-2acf-4ef4-a478-d00ad2bd5e58',
         img2: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/opaski%2Fop-1%2Fop1-2.png?alt=media&token=dd23c5b4-bf10-48c0-8439-652c2d5e2373',
@@ -10,6 +11,7 @@ export const productsData = [
     },
     {
         id: '2', name: 'Opaska warkocz', price: 50,
+        category: 'opaski',
         description: 'Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker',
         img1: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/opaski%2Fop-2%2Fop2-1.png?alt=media&token=44665e4b-2f37-498e-967a-fa63e59dca04',
         img2: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/opaski%2Fop-2%2Fop2-2.png?alt=media&token=3cc48561-984f-499d-baec-b46374c40b48',
@@ -19,6 +21,7 @@ export const productsData = [
     },
     {
         id: '3', name: 'Opaska warkocz typ 2', price: 50,
+        category: 'opaski',
         description: 'Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker',
         img1: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/opaski%2Fop-3%2Fop3-1.png?alt=media&token=559c70f7-dd95-4a01-a7ee-3c58233e9395',
         img2: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/opaski%2Fop-3%2Fop3-2.png?alt=media&token=f6fee0af-157f-4b72-983a-15956c5244b0',
@@ -28,6 +31,7 @@ export const productsData = [
     },
     {
         id: '4', name: 'Opaska typ 4', price: 50,
+        category: 'opaski',
         description: 'Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker',
         img1: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/opaski%2Fop-4%2Fop4-1.png?alt=media&token=c4c45867-a03d-4845-9e26-929b3fe4a8fa',
         img2: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/opaski%2Fop-4%2Fop4-2.png?alt=media&token=28c306c8-f69c-4124-8be9-7f220a340a6d',
@@ -38,6 +42,7 @@ export const productsData = [
 
     {
         id: '5', name: 'Koszyk z ażurowym wieczkiem', price: 80,
+        category: 'koszyki',
         description: 'Ręcznie wykonany koszyk ze sznurka bawełnianego z ażurowym wieczkiem oraz mocnym spodem z drewnianej sklejki. Idealny do przechowywania różnych rzeczy lub na prezent.',
         img1: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/koszyczki%2Fko-1%2Fko1-1.png?alt=media&token=a18e8894-a6c9-49c2-91f4-54be73a2feb8',
         img2: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/koszyczki%2Fko-1%2Fko1-2.png?alt=media&token=19871844-34d3-447c-bddc-c64784ec1054',
@@ -47,6 +52,7 @@ export const productsData = [
     },
     {
         id: '6', name: 'Koszyk ażurowym wieczkiem w kształcie serca', price: 90,
+        category: 'koszyki',
         description: 'Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz ',
         img1: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/koszyczki%2Fko-2%2Fko2-1.png?alt=media&token=fe1eeed8-d147-4b0d-95d8-0cc2363ab81c',
         img2: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/koszyczki%2Fko-2%2Fko2-2.png?alt=media&token=7343cc1a-9cda-4464-8cf8-94f452837929',
