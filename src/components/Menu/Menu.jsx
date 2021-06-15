@@ -2,7 +2,8 @@ import React from 'react'
 import './Menu.scss'
 import logo from '../../assets/logo.png'
 import LocalMallIcon from '@material-ui/icons/LocalMall'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { CategoryContext } from '../../contexts/CategoryContext';
 
 const menuItems = [
     { name: 'Home', linkTo: `/` },
@@ -14,9 +15,14 @@ const menuItems = [
 
 const Menu = () => {
     const [isOpen, setIsOpen] = React.useState(false);
+    const [, setCategory] = React.useContext(CategoryContext);
 
     const handleBurger = () => {
         setIsOpen(current => !current)
+    }
+
+    const handleCategoryReset = () => {
+        setCategory(null)
     }
 
     return (
@@ -24,9 +30,9 @@ const Menu = () => {
             ? `menu menu--scroll`
             : `menu`} >
             <div className='menu__wrapper'>
-                <Link to={`/`} className="menu__logo">
+                <NavLink to='/' className="menu__logo">
                     <img src={logo} alt='logo' />
-                </Link >
+                </NavLink >
                 <div
                     onClick={handleBurger}
                     className="menu__burger-menu">
@@ -38,16 +44,16 @@ const Menu = () => {
                 ${isOpen ? 'menu__container--open' : ''}`}>
                     <ul className={`menu__tabs
                         ${isOpen ? 'menu__tabs--open' : ''}`}>
-                        {menuItems.map(({ linkTo, name }) => {
-                            return <li className='menu__tabs-item'>
-                                <Link to={linkTo} >{name}</Link>
+                        {menuItems.map(({ linkTo, name }, index) => {
+                            return <li key={index} className='menu__tabs-item'>
+                                <NavLink onClick={handleCategoryReset} to={linkTo} >{name}</NavLink>
                             </li>
                         })}
                         <li className='menu__tabs-item menu__tabs-item-cart'>
-                            <Link className='menu__tabs-item-cart' to={`/koszyk`} >
+                            <NavLink className='menu__tabs-item-cart' to={`/koszyk`} >
                                 <LocalMallIcon />
                                 <div className="menu__tabs-item-quantity">1</div>
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

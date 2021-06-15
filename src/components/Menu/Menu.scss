@@ -29,6 +29,7 @@ $main-dark: #7E696C;
         height: 3px;
         z-index: 100;
         opacity: 0.95;
+        background: $main-dark;
 
         &:before,
         &:after {
@@ -121,8 +122,12 @@ $main-dark: #7E696C;
         }
 
         &-item{
-            color: $main-dark;
+            color: $main-shaded;
             font-weight: 300;
+
+            @media (min-width: 780px) {
+                color: $main-dark;
+            }
 
             &-quantity{
                 border-radius: 50%;

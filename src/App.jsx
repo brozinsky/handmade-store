@@ -7,7 +7,6 @@ import ShopPage from './pages/ShopPage'
 import ContactPage from './pages/ContactPage'
 import CartPage from './pages/CartPage'
 import ProductPage from './pages/ProductPage'
-import CategoryPage from './pages/ProductPage'
 import AboutPage from './pages/AboutPage'
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
       <Switch location={location} key={location.pathname}>
         <Route path="/" exact component={HomePage} />
         <Route path="/sklep" exact component={ShopPage} />
-        <Route path="/sklep/:category" component={CategoryPage} />
         <Route path="/sklep/:id" component={ProductPage} />
         <Route path="/kontakt" component={ContactPage} />
         <Route path="/o-mnie" component={AboutPage} />

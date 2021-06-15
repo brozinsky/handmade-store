@@ -94,7 +94,9 @@ const Carousel = () => {
             </button>
             <div className="carousel__panel">
                 {sliderData.map((slide, index) => {
-                    return <button onClick={() => changeSlide(index)}
+                    return <button
+                        key={index}
+                        onClick={() => changeSlide(index)}
                         className={`carousel__panel-item
                         ${currentSlide === index ? 'carousel__panel-item--active' : ''}`}
                     ></button>

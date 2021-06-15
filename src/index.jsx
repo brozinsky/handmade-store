@@ -4,12 +4,14 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-
+import { CategoryProvider } from './contexts/CategoryContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter >
-      <App />
+      <CategoryProvider>
+        <App />
+      </CategoryProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

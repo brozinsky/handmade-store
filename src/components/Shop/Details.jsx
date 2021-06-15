@@ -33,7 +33,10 @@ const Details = () => {
                         </div>
                         Dostępne kolory:
                         <div className="details__color-wrapper">
-                            {currentProduct.colors.map((color) => { return <div style={{ background: `#${color}` }} className={`details__color details__color--${color}`}></div> })}
+                            {currentProduct.colors.map((color, index) => {
+                                return <div key={index} style={{ background: `#${color}` }}
+                                    className={`details__color details__color--${color}`}></div>
+                            })}
                         </div>
                         <AddToCartButton />
                     </div>
