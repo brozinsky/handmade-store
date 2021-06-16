@@ -23,6 +23,7 @@ const Menu = () => {
 
     const handleCategoryReset = () => {
         setCategory(null)
+        setIsOpen(current => !current)
     }
 
     return (
@@ -31,7 +32,7 @@ const Menu = () => {
             : `menu`} >
             <div className='menu__wrapper'>
                 <NavLink to='/' className="menu__logo">
-                    <img src={logo} alt='logo' />
+                    <img className="menu__logo-img" src={logo} alt='logo' />
                 </NavLink >
                 <div
                     onClick={handleBurger}
@@ -50,7 +51,7 @@ const Menu = () => {
                             </li>
                         })}
                         <li className='menu__tabs-item menu__tabs-item-cart'>
-                            <NavLink className='menu__tabs-item-cart' to={`/koszyk`} >
+                            <NavLink onClick={handleCategoryReset} className='menu__tabs-item-cart' to={`/koszyk`} >
                                 <LocalMallIcon />
                                 <div className="menu__tabs-item-quantity">1</div>
                             </NavLink>

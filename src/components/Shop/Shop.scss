@@ -10,7 +10,11 @@ $main-dark: #7E696C;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: space-around;
-    margin-top: 100px;
+
+
+    @media (min-width: 780px) {
+        margin-top: 100px;
+    }
 
     &__products{
         display: flex;
@@ -53,7 +57,6 @@ $main-dark: #7E696C;
 
 .product{
     margin: 1rem 1rem;
-
     background: #fff;
     border-radius: 2px;
     display: inline-block;
@@ -73,10 +76,6 @@ $main-dark: #7E696C;
         &:hover{
             cursor: pointer;
         }
-
-        &-container{
-
-        }
     }
     &__info{
         display: flex;
@@ -92,9 +91,6 @@ $main-dark: #7E696C;
         &:hover{
             cursor: pointer;
         }
-
-        }
-        &-row{
 
         }
         &-price{
@@ -115,6 +111,12 @@ $main-dark: #7E696C;
 .filter{
     margin: 0;
     padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 
     &__button{
         border: none;

@@ -13,11 +13,12 @@ $main-dark: #7E696C;
     z-index: 99;
     margin-top: 0;
     transition-duration: 0.3s;
-    background: $main-light;
-    box-shadow: 0 4px 2px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.1);
 
     @media (min-width: 780px) {
         height: 100px;
+        background: $main-light;
+        box-shadow: 0 4px 2px rgba(0,0,0,0.05), 0 2px 2px rgba(0,0,0,0.1);
+
     }
 
     &__burger {
@@ -57,13 +58,16 @@ $main-dark: #7E696C;
         }
 
         &-menu {
-            position: relative;
-            right: 5%;
-            top: 5%;
+            position: fixed;
+            right: 1.5%;
+            top: 1.5%;
             display: block;
             height: 3rem;
             width: 3rem;
             z-index: 99;
+            border-radius: 50%;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.37);
+            background: #fff;
 
             &:hover{
                 cursor: pointer;
@@ -200,9 +204,11 @@ $main-dark: #7E696C;
 
 
     &__logo{
-        transform: scale(0.6);
+        transform: scale(0.5);
+        display: none;
         @media (min-width: 780px) {
-            transform: scale(0.8);
+            transform: scale(0.6);
+            display: block;
         }
     }
 

@@ -6,8 +6,9 @@ $white-disabled: rgba(255, 255, 255, 0.83);
 
 
 .logo-big{
-    margin-top: 15px;
-
+    @media (min-width: 780px) {
+        margin-top: 15px;
+    }
     &__image{
         max-width: 100vw;
 

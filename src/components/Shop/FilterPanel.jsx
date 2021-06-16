@@ -14,10 +14,9 @@ const fitlerItems = [
 const FilterPanel = () => {
     return (
         <ul className="filter">
-            {fitlerItems.map(({ name, cat }) => {
-                return <FilterButton name={name} cat={cat} />
+            {fitlerItems.map(({ name, cat }, index) => {
+                return <FilterButton key={index} name={name} cat={cat} />
             })}
-
         </ul>
     )
 }

@@ -52,10 +52,6 @@ $main-dark: #7E696C;
             flex-direction: row;
             align-items: center;
             color: $main-dark;
-
-            @media (max-width: 780px) {
-                margin-top: 1.5rem;
-            }
         }
 
         &-wrapper{
@@ -65,6 +61,10 @@ $main-dark: #7E696C;
             color: $main-dark;
             font-weight: 300;
             font-family: 'Amita';
+
+            @media (max-width: 780px) {
+                margin-top: 1rem;
+            }
         }
 
         &-icon{
