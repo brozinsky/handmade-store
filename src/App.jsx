@@ -1,5 +1,5 @@
-import './App.scss';
-import { Route, Switch, useLocation } from "react-router-dom";
+import './App.scss'
+import { Route, Switch, useLocation } from "react-router-dom"
 import Menu from './components/Menu/Menu'
 
 import HomePage from './pages/HomePage'

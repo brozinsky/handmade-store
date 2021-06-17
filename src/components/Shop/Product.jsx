@@ -18,8 +18,8 @@ const Product = ({ imgUrl, name, price, id, colors }) => {
                 <Link to={`/sklep/${id}`}
                     href="./sklep/produkt"
                     className="product__info-name">{name}</Link>
-                <Counter />
-                <ColorPanel colors={colors} />
+                <Counter id={id} />
+                <ColorPanel colors={colors} id={id} />
                 <div className="product__info-row">
                     <div className="product__info-price-container">
                         <span className='product__info-price'>{price} zł</span>
