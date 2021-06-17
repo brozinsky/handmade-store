@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom"
 import { productsData } from "../../data/productsData"
 import AddToCartButton from './AddToCartButton'
 import LogoMobile from '../LogoMobile'
+import ColorPanel from './ColorPanel'
+import Counter from './Counter'
 
 const Details = () => {
     const { id } = useParams()
@@ -29,18 +31,9 @@ const Details = () => {
                         <div className="details__info-container">
                             <h3 className="details__title">{currentProduct.name}</h3>
                             <h4 className="details__price">{currentProduct.price},00 zł</h4>
-                            <div className="details__input">
-                                <button className="details__input-btn">-</button>
-                                <span className="details__input-number">1</span>
-                                <button className="details__input-btn">+</button>
-                            </div>
+                            <Counter />
                             Dostępne kolory:
-                            <div className="details__color-wrapper">
-                                {currentProduct.colors.map((color, index) => {
-                                    return <div key={index} style={{ background: `#${color}` }}
-                                        className={`details__color details__color--${color}`}></div>
-                                })}
-                            </div>
+                            <ColorPanel colors={currentProduct.colors} />
                             <AddToCartButton />
                         </div>
                     </div>

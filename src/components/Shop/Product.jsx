@@ -2,29 +2,27 @@ import React from 'react'
 import AddToCartButton from './AddToCartButton'
 import './Shop.scss';
 import { Link } from "react-router-dom"
+import ColorPanel from './ColorPanel'
+import Counter from './Counter'
 
-const Product = ({ imgUrl, name, price, sale, id, isOnSale, isNew }) => {
+const Product = ({ imgUrl, name, price, id, colors }) => {
 
     return (
         <div className="product">
             <Link to={`/sklep/${id}`} className="product__img-container">
-                <img className="product__img" src={`${imgUrl}`} alt={name} />
-                <div
-                    className={
-                        isOnSale ? 'icon icon--sale' : ''
-                            || isNew ? 'icon icon--new' : ''}>
-                    {isNew ? 'New' : null || isOnSale ? `-${sale}%` : null} </div>
+                <img className="product__img"
+                    src={`${imgUrl}`}
+                    alt={name} />
             </Link>
             <div className="product__info">
-                <Link to={`/sklep/${id}`} href="./sklep/produkt" className="product__info-name">{name}</Link>
+                <Link to={`/sklep/${id}`}
+                    href="./sklep/produkt"
+                    className="product__info-name">{name}</Link>
+                <Counter />
+                <ColorPanel colors={colors} />
                 <div className="product__info-row">
                     <div className="product__info-price-container">
-                        <span className={
-                            isOnSale
-                                ? 'product__info-price product__info-price--crossed'
-                                : 'product__info-price'}>{price} zł</span>
-                        {isOnSale ? <span className="product__info-price product__info-price--sale">
-                            {price * sale / 100}  zł</span> : null}
+                        <span className='product__info-price'>{price} zł</span>
                     </div>
                     <AddToCartButton />
                 </div>
