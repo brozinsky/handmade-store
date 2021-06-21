@@ -1,7 +1,7 @@
 import React from 'react'
 import { QueueProductsContext } from '../../contexts/QueueProductsContext';
 
-const Counter = ({ id }) => {
+const Counter = ({ id, name, price }) => {
     const [queueProducts, setQueueProducts] = React.useContext(QueueProductsContext)
 
     // const handleAdd = () => {
@@ -16,7 +16,7 @@ const Counter = ({ id }) => {
             setQueueProducts(prevState => ({ ...prevState, count: 0 }))
         }
         if (queueProducts.count < 10) {
-            setQueueProducts(prevState => ({ ...prevState, id, count: prevState.count + 1 }))
+            setQueueProducts(prevState => ({ ...prevState, id, price, name, count: prevState.count + 1 }))
         }
     }
 
@@ -25,7 +25,7 @@ const Counter = ({ id }) => {
             setQueueProducts(prevState => ({ ...prevState, count: 1 }))
         }
         if (queueProducts.count > 1) {
-            setQueueProducts(prevState => ({ ...prevState, id, count: prevState.count - 1 }))
+            setQueueProducts(prevState => ({ ...prevState, id, name, price, count: prevState.count - 1 }))
         }
     }
 

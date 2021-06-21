@@ -1,24 +1,18 @@
 import React from 'react'
 import { QueueProductsContext } from '../../contexts/QueueProductsContext';
 
-const ColorBtn = ({ color, id }) => {
+const ColorBtn = ({ color, id, name, price }) => {
     const [queueProducts, setQueueProducts] = React.useContext(QueueProductsContext)
 
     console.log(queueProducts)
 
     const handleChange = () => {
         if (color !== queueProducts.color) {
-            setQueueProducts(prevState => ({ ...prevState, id, color: color }))
+            setQueueProducts(prevState => ({ ...prevState, id, name, price, color: color }))
         }
     }
 
     return (
-        // <button onClick={handleClick}
-        //     style={{ background: `#${color}` }}
-        //     className={`details__color
-        //     details__color--${color}
-        //     ${isSelected ? 'details__color--active' : ''}
-        //     `}></button>
         <label className={`details__color-label`}>
             <input type="radio"
                 name="color"

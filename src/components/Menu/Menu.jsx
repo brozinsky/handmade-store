@@ -4,18 +4,19 @@ import logo from '../../assets/logo.png'
 import LocalMallIcon from '@material-ui/icons/LocalMall'
 import { NavLink } from "react-router-dom";
 import { CategoryContext } from '../../contexts/CategoryContext';
+import { CartContext } from '../../contexts/CartContext';
 
 const menuItems = [
     { name: 'Home', linkTo: `/` },
     { name: 'Sklep', linkTo: `/sklep` },
     { name: 'Kontakt', linkTo: `/kontakt` },
     { name: 'O mnie', linkTo: `/o-mnie` },
-
 ]
 
 const Menu = () => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [, setCategory] = React.useContext(CategoryContext);
+    const [cart,] = React.useContext(CartContext);
 
     const handleBurger = () => {
         setIsOpen(current => !current)
@@ -53,7 +54,7 @@ const Menu = () => {
                         <li className='menu__tabs-item menu__tabs-item-cart'>
                             <NavLink onClick={handleCategoryReset} className='menu__tabs-item-cart' to={`/koszyk`} >
                                 <LocalMallIcon />
-                                <div className="menu__tabs-item-quantity">1</div>
+                                <div className="menu__tabs-item-quantity">{cart.length}</div>
                             </NavLink>
                         </li>
                     </ul>

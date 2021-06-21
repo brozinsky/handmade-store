@@ -2,11 +2,13 @@ import React from 'react'
 import Summary from './Summary'
 import CartDetails from './CartDetails'
 import Delivery from './Delivery'
-import PaymentDetails from './PaymentDetails'
 import './Cart.scss'
 import LogoMobile from '../LogoMobile'
+import { CartContext } from '../../contexts/CartContext';
 
 const Cart = () => {
+    const [cart, setCart] = React.useContext(CartContext)
+
     return (
         <>
             <div className="white-space" />
@@ -14,10 +16,14 @@ const Cart = () => {
             <section className="cart">
                 <h2 className="cart__title">Twój koszyk</h2>
                 <div className="cart__wrap">
-                    <Delivery />
-                    <PaymentDetails />
+                    {/* <Delivery /> */}
                     <CartDetails />
-                    <Summary />
+                    <div className="summary">
+                        {cart.length >= 0
+                            ? <Summary />
+                            : <h3 className="summary__subtitle">Twój koszyk jest pusty</h3>
+                        }
+                    </div>
                 </div>
             </section>
         </>

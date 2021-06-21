@@ -51,7 +51,7 @@ export const productsData = [
         colors: ['F0A640', '2B6A52', '1EA0AA']
     },
     {
-        id: '6', name: 'Koszyk ażurowym wieczkiem w kształcie serca', price: 90,
+        id: '6', name: 'Koszyk z ażurowym wieczkiem w kształcie serca', price: 90,
         category: 'koszyki',
         description: 'Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz ',
         img1: 'https://firebasestorage.googleapis.com/v0/b/sznurkowe-krolowe.appspot.com/o/koszyczki%2Fko-2%2Fko2-1.png?alt=media&token=fe1eeed8-d147-4b0d-95d8-0cc2363ab81c',

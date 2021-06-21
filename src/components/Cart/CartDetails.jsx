@@ -1,22 +1,29 @@
 import React from 'react'
 import './Cart.scss'
+import { CartContext } from '../../contexts/CartContext';
+import ProductInCart from './ProductInCart';
+
+const tableContent = ['Ilość', 'Kolor', 'Cena']
 
 const CartDetails = () => {
+    const [cart, setCart] = React.useContext(CartContext)
     return (
-        <div className="table">
-            <table>
-                <tr className="table__tr">
-                    <th className="table__th">Produkt</th>
-                    <th className="table__th">Ilość</th>
-                    <th className="table__th">Cena</th>
-                </tr>
-                <tr className="table__tr">
-                    <td className="table__td">Produkt 1</td>
-                    <td className="table__td">2</td>
-                    <td className="table__td">50,00</td>
-                </tr>
-            </table>
-        </div>
+        <table className="table">
+            <tr className="table__tr">
+                <th className="table__th-1">Produkt</th>
+                {tableContent.map((title, index) => {
+                    return <th className="table__th" key={index}>{title}</th>
+                })}
+                <th className="table__th-2"></th>
+            </tr>
+            {cart.map(({ color, count, id, name, price }, index) => {
+                return <ProductInCart color={color}
+                    name={name}
+                    key={index}
+                    quantity={count}
+                    price={price} />
+            })}
+        </table>
     )
 }
 

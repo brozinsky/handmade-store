@@ -31,9 +31,9 @@ const Details = () => {
                         <div className="details__info-container">
                             <h3 className="details__title">{currentProduct.name}</h3>
                             <h4 className="details__price">{currentProduct.price},00 zł</h4>
-                            <Counter id={id} />
+                            <Counter id={id} name={currentProduct.name} price={currentProduct.price} />
                             Dostępne kolory:
-                            <ColorPanel colors={currentProduct.colors} id={id} />
+                            <ColorPanel colors={currentProduct.colors} id={id} name={currentProduct.name} price={currentProduct.price} />
                             <AddToCartButton />
                         </div>
                     </div>
