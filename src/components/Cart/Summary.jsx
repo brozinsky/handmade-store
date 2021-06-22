@@ -16,7 +16,7 @@ const Item = ({ value, title }) => {
 }
 
 const Summary = () => {
-    const [cart, setCart] = React.useContext(CartContext)
+    const [cart,] = React.useContext(CartContext)
 
     const [sumPrice, setSumPrice] = React.useState(
         { name: 'Suma', value: 0 },
@@ -37,7 +37,7 @@ const Summary = () => {
         }, 0);
 
         setSumPrice(prevState => ({ ...prevState, value: total }))
-    }, [])
+    }, [cart])
 
 
     //update total price

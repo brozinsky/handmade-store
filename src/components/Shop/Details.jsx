@@ -2,10 +2,9 @@ import React from 'react'
 import './Details.scss'
 import { useParams } from "react-router-dom"
 import { productsData } from "../../data/productsData"
-import AddToCartButton from './AddToCartButton'
 import LogoMobile from '../LogoMobile'
-import ColorPanel from './ColorPanel'
-import Counter from './Counter'
+import ProductForm from './ProductForm'
+import { QueueProductsProvider } from '../../contexts/QueueProductsContext'
 
 const Details = () => {
     const { id } = useParams()
@@ -31,10 +30,9 @@ const Details = () => {
                         <div className="details__info-container">
                             <h3 className="details__title">{currentProduct.name}</h3>
                             <h4 className="details__price">{currentProduct.price},00 zł</h4>
-                            <Counter id={id} name={currentProduct.name} price={currentProduct.price} />
-                            Dostępne kolory:
-                            <ColorPanel colors={currentProduct.colors} id={id} name={currentProduct.name} price={currentProduct.price} />
-                            <AddToCartButton />
+                            <QueueProductsProvider>
+                                <ProductForm colors={currentProduct.colors} id={id} name={currentProduct.name} price={currentProduct.price} />
+                            </QueueProductsProvider>
                         </div>
                     </div>
                     <h4 className="details__text-title">Opis:</h4>

@@ -4,9 +4,8 @@ import { QueueProductsContext } from '../../contexts/QueueProductsContext';
 const ColorBtn = ({ color, id, name, price }) => {
     const [queueProducts, setQueueProducts] = React.useContext(QueueProductsContext)
 
-    console.log(queueProducts)
-
     const handleChange = () => {
+        console.log(queueProducts)
         if (color !== queueProducts.color) {
             setQueueProducts(prevState => ({ ...prevState, id, name, price, color: color }))
         }

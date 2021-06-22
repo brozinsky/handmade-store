@@ -5,7 +5,7 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from "react-router-dom"
 import { CategoryProvider } from './contexts/CategoryContext'
-import { QueueProductsProvider } from './contexts/QueueProductsContext'
+// import { QueueProductsProvider } from './contexts/QueueProductsContext'
 import { CartProvider } from './contexts/CartContext'
 
 ReactDOM.render(
@@ -13,9 +13,9 @@ ReactDOM.render(
     <BrowserRouter >
       <CategoryProvider>
         <CartProvider>
-          <QueueProductsProvider>
-            <App />
-          </QueueProductsProvider>
+          {/* <QueueProductsProvider> */}
+          <App />
+          {/* </QueueProductsProvider> */}
         </CartProvider>
       </CategoryProvider>
     </BrowserRouter>

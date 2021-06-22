@@ -164,7 +164,7 @@ $main-dark: #7E696C;
 
     &__form{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
     }
@@ -182,6 +182,29 @@ $main-dark: #7E696C;
 
         &-number{
             margin: 0 5px;
+        }
+
+        &-area{
+            display: block;
+        }
+
+        &-button{
+            display: block;
+            margin: 0.5rem auto;
+            width: 170px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px dashed $main-dark;
+            color: $main-dark;
+            font-size: 1rem;
+            text-align: center;
+            background: transparent;
+
+            &:hover{
+              color: #111;
+              border: 1px solid #111;
+              cursor: pointer;
+            }
         }
 
         &-btn{
