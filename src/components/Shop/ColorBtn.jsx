@@ -18,7 +18,7 @@ const ColorBtn = ({ color, id, name, price }) => {
                 onChange={handleChange}
                 value={color}
                 className={`details__color-input`} />
-            <span class="swatch" style={{ background: `#${color}` }}></span>
+            <span className="swatch" style={{ background: `#${color}` }}></span>
         </label>
     )
 }

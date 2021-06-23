@@ -4,13 +4,16 @@ import { Link } from "react-router-dom"
 import ProductForm from './ProductForm'
 import { QueueProductsProvider } from '../../contexts/QueueProductsContext'
 
-const Product = ({ imgUrl, name, price, id, colors }) => {
+const Product = ({ name, price, id, colors, images }) => {
 
     return (
         <div className="product">
             <Link to={`/sklep/${id}`} className="product__img-container">
                 <img className="product__img"
-                    src={`${imgUrl}`}
+                    src={`${images[0]}`}
+                    alt={name} />
+                <img className="product__img-2"
+                    src={`${images[1]}`}
                     alt={name} />
             </Link>
             <div className="product__info">

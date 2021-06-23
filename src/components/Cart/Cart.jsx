@@ -19,7 +19,7 @@ const Cart = () => {
                     {/* <Delivery /> */}
                     <CartDetails />
                     <div className="summary">
-                        {cart.length >= 0
+                        {cart.length >= 1
                             ? <Summary />
                             : <h3 className="summary__subtitle">Twój koszyk jest pusty</h3>
                         }

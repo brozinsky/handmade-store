@@ -7,6 +7,33 @@ $main-dark: #7E696C;
     flex-direction: column;
     margin: 0 auto;
 
+    &__carousel{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        &-img{
+            &-container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        &-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 30px;
+            margin: 0 0.2rem;
+            border: 1px rgb(175, 175, 175) solid;
+            color: rgb(175, 175, 175);
+        }
+    }
+
     &__wrap{
         background: #fff;
         // margin-top: 60px;
@@ -29,7 +56,21 @@ $main-dark: #7E696C;
             flex-direction: column;
 
             @media (min-width: 780px) {
-                flex-direction: row;
+                // flex-direction: row;
+            }
+        }
+
+        &-small{
+            border-bottom: 2px solid transparent;
+            padding-bottom: 0.2rem;
+
+            &:hover{
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+
+            &--active{
+                border-bottom: 2px solid #000;
             }
         }
     }
@@ -132,9 +173,9 @@ $main-dark: #7E696C;
             max-height: 100px;
 
             @media (min-width: 780px) {
-                flex-direction: column;
-                width: 100px;
-                max-height: 274px;
+                // flex-direction: column;
+                max-width: 274px;
+                max-height: 100%;
             }
         }
     }

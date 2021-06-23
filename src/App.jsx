@@ -22,6 +22,7 @@ function App() {
         <Route path="/kontakt" component={ContactPage} />
         <Route path="/o-mnie" component={AboutPage} />
         <Route path="/koszyk" component={CartPage} />
+        <Route component={HomePage} />
       </Switch>
     </>
   );

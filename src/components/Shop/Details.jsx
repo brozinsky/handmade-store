@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom"
 import { productsData } from "../../data/productsData"
 import LogoMobile from '../LogoMobile'
 import ProductForm from './ProductForm'
+import DetailsCarousel from './DetailsCarousel'
+
 import { QueueProductsProvider } from '../../contexts/QueueProductsContext'
 
 const Details = () => {
@@ -17,15 +19,7 @@ const Details = () => {
                 <div className="details">
                     <div className="details__top">
                         <div className="details__image-container">
-                            <div className="details__image">
-                                <img className="product__img" src={`${currentProduct.img1}`} alt="Product" />
-                            </div>
-                            <div className="details__image-small-container">
-                                <img className="details__image-small"
-                                    src={`${currentProduct.img2}`} alt="Product" />
-                                <img className="details__image-small" src={`${currentProduct.img3}`} alt="Product" />
-                                <img className="details__image-small" src={`${currentProduct.img4}`} alt="Product" />
-                            </div>
+                            <DetailsCarousel images={currentProduct.images} />
                         </div>
                         <div className="details__info-container">
                             <h3 className="details__title">{currentProduct.name}</h3>

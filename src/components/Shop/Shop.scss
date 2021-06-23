@@ -73,10 +73,35 @@ $main-dark: #7E696C;
         height: 274px;
         margin: 0 auto;
 
+        &-container{
+            position: relative;
+            overflow: hidden;
+        }
+
         &:hover{
             cursor: pointer;
         }
     }
+
+    &__img-2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 274px;
+        height: 274px;
+        margin: 0 auto;
+        transition: 0.5s;
+        opacity: 0;
+        transform: scale(1);
+
+        &:hover{
+            cursor: pointer;
+            opacity: 1;
+            transform: scale(1.02);
+        }
+    }
+
+
     &__info{
         display: flex;
         flex-direction: column;

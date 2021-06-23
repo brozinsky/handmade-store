@@ -21,23 +21,23 @@ const Shop = () => {
                 <div className="shop__container">
                     {category === null
                         ? productsData
-                            .map(({ name, price, img1, id, colors }) => {
+                            .map(({ name, price, id, colors, images }) => {
                                 return <Product name={name}
                                     price={price}
-                                    imgUrl={img1}
                                     id={id}
                                     colors={colors}
-                                    key={id} />
+                                    key={id}
+                                    images={images} />
                             })
                         : productsData
                             .filter(product => product.category === category)
-                            .map(({ name, price, img1, id, colors }) => {
+                            .map(({ name, price, id, colors, images }) => {
                                 return <Product name={name}
                                     price={price}
-                                    imgUrl={img1}
                                     id={id}
                                     colors={colors}
-                                    key={id} />
+                                    key={id}
+                                    images={images} />
                             })}
                 </div>
             </div>
