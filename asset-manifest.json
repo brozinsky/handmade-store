@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/handmade-store/static/css/main.c20645fc.chunk.css",
-    "main.js": "/handmade-store/static/js/main.2c5c75f5.chunk.js",
-    "main.js.map": "/handmade-store/static/js/main.2c5c75f5.chunk.js.map",
-    "runtime-main.js": "/handmade-store/static/js/runtime-main.842874a7.js",
-    "runtime-main.js.map": "/handmade-store/static/js/runtime-main.842874a7.js.map",
-    "static/js/2.c7524b76.chunk.js": "/handmade-store/static/js/2.c7524b76.chunk.js",
-    "static/js/2.c7524b76.chunk.js.map": "/handmade-store/static/js/2.c7524b76.chunk.js.map",
-    "static/js/3.0c344c55.chunk.js": "/handmade-store/static/js/3.0c344c55.chunk.js",
-    "static/js/3.0c344c55.chunk.js.map": "/handmade-store/static/js/3.0c344c55.chunk.js.map",
+    "main.css": "/handmade-store/static/css/main.4e9e695c.chunk.css",
+    "main.js": "/handmade-store/static/js/main.a24f3ac5.chunk.js",
+    "main.js.map": "/handmade-store/static/js/main.a24f3ac5.chunk.js.map",
+    "runtime-main.js": "/handmade-store/static/js/runtime-main.e0008a8a.js",
+    "runtime-main.js.map": "/handmade-store/static/js/runtime-main.e0008a8a.js.map",
+    "static/js/2.e82b36bb.chunk.js": "/handmade-store/static/js/2.e82b36bb.chunk.js",
+    "static/js/2.e82b36bb.chunk.js.map": "/handmade-store/static/js/2.e82b36bb.chunk.js.map",
+    "static/js/3.116df7c7.chunk.js": "/handmade-store/static/js/3.116df7c7.chunk.js",
+    "static/js/3.116df7c7.chunk.js.map": "/handmade-store/static/js/3.116df7c7.chunk.js.map",
     "index.html": "/handmade-store/index.html",
-    "static/css/main.c20645fc.chunk.css.map": "/handmade-store/static/css/main.c20645fc.chunk.css.map",
-    "static/js/2.c7524b76.chunk.js.LICENSE.txt": "/handmade-store/static/js/2.c7524b76.chunk.js.LICENSE.txt",
+    "static/css/main.4e9e695c.chunk.css.map": "/handmade-store/static/css/main.4e9e695c.chunk.css.map",
+    "static/js/2.e82b36bb.chunk.js.LICENSE.txt": "/handmade-store/static/js/2.e82b36bb.chunk.js.LICENSE.txt",
     "static/media/bcg-1.37916696.svg": "/handmade-store/static/media/bcg-1.37916696.svg",
     "static/media/bcg-2.4915bba9.svg": "/handmade-store/static/media/bcg-2.4915bba9.svg",
     "static/media/caro-1.6af42fea.png": "/handmade-store/static/media/caro-1.6af42fea.png",
@@ -32,9 +32,9 @@
     "static/media/zigzag.ebbc991f.svg": "/handmade-store/static/media/zigzag.ebbc991f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.842874a7.js",
-    "static/js/2.c7524b76.chunk.js",
-    "static/css/main.c20645fc.chunk.css",
-    "static/js/main.2c5c75f5.chunk.js"
+    "static/js/runtime-main.e0008a8a.js",
+    "static/js/2.e82b36bb.chunk.js",
+    "static/css/main.4e9e695c.chunk.css",
+    "static/js/main.a24f3ac5.chunk.js"
   ]
 }
