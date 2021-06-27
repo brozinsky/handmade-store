@@ -33,14 +33,17 @@ const ProductForm = ({ colors, name, price, id }) => {
                     return <ColorBtn key={index} id={id} color={color} name={name} price={price} />
                 })}
             </div>
-            <input onChange={handleChange}
-                className="details__input-area"
-                type="number"
-                id="count"
-                name="count"
-                placeholder={1}
-                defaultValue={1}
-                min="1" max="10" />
+            <div className="details__input-area-wrapper">
+                <span>Ilość:</span>
+                <input onChange={handleChange}
+                    className="details__input-area"
+                    type="number"
+                    id="count"
+                    name="count"
+                    placeholder={1}
+                    defaultValue={1}
+                    min="1" max="10" />
+            </div>
             <input className="details__input-button" type="submit" value="Dodaj do koszyka" />
         </form>
     )

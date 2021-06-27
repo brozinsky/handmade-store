@@ -5,16 +5,21 @@ import { productsData } from "../../data/productsData"
 import LogoMobile from '../LogoMobile'
 import ProductForm from './ProductForm'
 import DetailsCarousel from './DetailsCarousel'
+import DetailsZoom from './DetailsZoom'
+import { ZoomContext } from '../../contexts/ZoomContext'
 
 import { QueueProductsProvider } from '../../contexts/QueueProductsContext'
 
 const Details = () => {
+    const [isZoomed, setIsZoomed] = React.useContext(ZoomContext)
     const { id } = useParams()
     const currentProduct = productsData.find(item => item.id === id)
+
 
     return (
         <>
             <LogoMobile />
+            {isZoomed ? <DetailsZoom images={currentProduct.images} /> : null}
             <div className="details__wrap">
                 <div className="details">
                     <div className="details__top">

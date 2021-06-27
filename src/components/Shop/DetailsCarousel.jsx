@@ -1,9 +1,12 @@
 import React from 'react'
 import ArrowRightIcon from '@material-ui/icons/ArrowRight'
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft'
+import { ZoomContext } from '../../contexts/ZoomContext'
+import ZoomOutMapIcon from '@material-ui/icons/ZoomOutMap'
 
 const DetailsCarousel = ({ images }) => {
     const [currentImg, setCurrentImg] = React.useState(0);
+    const [, setIsZoomed] = React.useContext(ZoomContext)
 
     const length = images.length
     const autoPlayRef = React.useRef()
@@ -27,14 +30,23 @@ const DetailsCarousel = ({ images }) => {
         setCurrentImg(index)
     }
 
+    const handleZoomIn = () => {
+        setIsZoomed(true)
+    }
+
     return (
         <div className="details__carousel">
+
             <div className="details__carousel-img-container">
+                <ZoomOutMapIcon className="details__carousel-icon"
+                    onClick={handleZoomIn}
+                />
                 <button onClick={handlePrev}
                     className="details__carousel-button">
                     <ArrowLeftIcon />
                 </button>
-                <img className="product__img" src={`${images[currentImg]}`} alt="Product" />
+                <img onClick={handleZoomIn}
+                    className="product__img" src={`${images[currentImg]}`} alt="Product" />
                 <button onClick={handleNext}
                     className="details__carousel-button">
                     <ArrowRightIcon />
