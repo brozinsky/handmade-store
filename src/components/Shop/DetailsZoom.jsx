@@ -6,7 +6,7 @@ import ArrowLeftIcon from '@material-ui/icons/ArrowLeft'
 
 const DetailsZoom = ({ images }) => {
     const [currentImg, setCurrentImg] = React.useState(0);
-    const [isZoomed, setIsZoomed] = React.useContext(ZoomContext)
+    const [, setIsZoomed] = React.useContext(ZoomContext)
 
     const length = images.length
 
@@ -48,6 +48,7 @@ const DetailsZoom = ({ images }) => {
                 <div className="details__image-small-container">
                     {images.map((img, index) => {
                         return <img
+                            key={index}
                             onClick={() => handleImageClick(index)}
                             className={`details__image-small
                         ${index === currentImg ? 'details__image-small--active' : ''}

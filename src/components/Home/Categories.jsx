@@ -29,7 +29,8 @@ const Categories = () => {
             {categoryData.map(({ name, img, logo, category }, index) => {
                 return <CategoryItem key={index} name={name}
                     img={img} logo={logo} cat={category} />
-            })}
+            })
+            }
         </div>
     )
 }

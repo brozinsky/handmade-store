@@ -1,0 +1,113 @@
+$loader-color: #F4F4F4;
+
+.loader{
+    &__product{
+        margin: 0.5rem ;
+        background: #fff;
+        border-radius: 2px;
+        display: inline-block;
+        position: relative;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.07), 0 1px 1px rgba(0,0,0,0.07);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &-img{
+            height: 274px;
+            width: 274px;
+            background: $loader-color;
+        }
+
+        &-name{
+            background: $loader-color;
+            width: 100%;
+            height: 1rem;
+            margin: 0.5rem 0 ;
+        }
+
+        &-price{
+            background: $loader-color;
+            height: 1rem;
+            width: 30%;
+        }
+    }
+
+    &__carousel{
+        margin-top: 5px;
+        position: relative;
+        height: 380px;
+        overflow: hidden;
+        width: 100vw;
+        background: $loader-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 780px) {
+            flex-direction: row;
+            max-width: 1020px;
+        }
+
+        @media (min-width: 1200px) {
+            max-width: 1020px;
+        }
+
+        &-inner{
+            height: 140px;
+            min-width: 80%;
+            background: #fff;
+            display:  flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            @media (min-width: 780px) {
+                height: 225px;
+                min-width: 440px;
+            }
+
+            &-text{
+                height: 5.6rem;
+                width: 65%;
+                background: $loader-color;
+            }
+            &-text-title{
+                height: 46px;
+                width: 65%;
+                background: $loader-color;
+            }
+        }
+    }
+
+    &__home{
+        &-logo{
+            width: 100vw;
+            height: 75px;
+            background: $loader-color;
+
+            @media (min-width: 780px) {
+                max-width: 1020px;
+                height: 210px;
+            }
+        }
+        &-slider{
+            margin-top: 5px;
+            position: relative;
+            height: 380px;
+            overflow: hidden;
+            width: 100vw;
+            background: $loader-color;
+
+            @media (min-width: 780px) {
+                flex-direction: row;
+                max-width: 1020px;
+            }
+
+            @media (min-width: 1200px) {
+                max-width: 1020px;
+            }
+        }
+    }
+}
+

@@ -1,16 +1,14 @@
 import React from 'react'
 import Product from './Product'
 import FilterPanel from './FilterPanel'
-// import ProductLoader from '../Loaders/ProductLoader'
-import './Shop.scss';
-import { ReactComponent as Zigzag } from '../../assets/zigzag.svg'
-import { CategoryContext } from '../../contexts/CategoryContext';
+import './Shop.scss'
+import { CategoryContext } from '../../contexts/CategoryContext'
 import LogoMobile from '../LogoMobile'
-import { ProductDataContext } from '../../contexts/ProductDataContext';
+import { ProductDataContext } from '../../contexts/ProductDataContext'
 
 const Shop = () => {
     const [productData,] = React.useContext(ProductDataContext)
-    const [category,] = React.useContext(CategoryContext);
+    const [category,] = React.useContext(CategoryContext)
 
     return (
         <div className="shop">
@@ -19,7 +17,6 @@ const Shop = () => {
                 <FilterPanel />
                 <h2 className="shop__title">{category
                     ? category : 'Wszystkie produkty'}</h2>
-                <Zigzag />
                 <div className="shop__container">
                     {category === null
                         ? productData

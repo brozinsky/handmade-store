@@ -55,6 +55,7 @@ const DetailsCarousel = ({ images }) => {
             <div className="details__image-small-container">
                 {images.map((img, index) => {
                     return <img
+                        key={index}
                         onClick={() => handleImageClick(index)}
                         className={`details__image-small
                         ${index === currentImg ? 'details__image-small--active' : ''}

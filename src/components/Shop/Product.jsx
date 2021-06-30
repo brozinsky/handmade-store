@@ -1,11 +1,8 @@
 import React from 'react'
 import './Shop.scss';
 import { Link } from "react-router-dom"
-import ProductForm from './ProductForm'
-import { QueueProductsProvider } from '../../contexts/QueueProductsContext'
 
-const Product = ({ name, price, id, colors, images }) => {
-
+const Product = ({ name, price, id, images }) => {
     return (
         <div className="product">
             <Link to={`/sklep/${id}`} className="product__img-container">

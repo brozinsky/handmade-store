@@ -1,21 +1,7 @@
 import React from 'react'
-import caro1 from '../../assets/caro-1.png'
-import caro2 from '../../assets/caro-2.png'
-import caroMob1 from '../../assets/caro-mob-1.png'
-import caroMob2 from '../../assets/caro-mob-2.png'
 import ArrowRightIcon from '@material-ui/icons/ArrowRight'
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft'
 import InfoContainer from './InfoContainer'
-const sliderData = [
-    {
-        img: caro1, imgMob: caroMob1, title: 'Pierwszy tytuł',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. '
-    },
-    {
-        img: caro2, imgMob: caroMob2, title: 'Następny tytuł',
-        text: 'Lorem jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. '
-    }
-]
 
 function CarouselImage({ index, currentSlide, img, imgMob }) {
     return (
@@ -26,9 +12,6 @@ function CarouselImage({ index, currentSlide, img, imgMob }) {
                     : "carousel__image"}
                     media="(min-width: 768px)"
                     srcSet={img} />
-                {/* <source className="image"
-                    media="(min-width: 768px)"
-                    srcSet={props.image.imgUrlTablet} /> */}
                 <img className={index === currentSlide ?
                     "carousel__image carousel__image--active"
                     : "carousel__image"}
@@ -38,7 +21,7 @@ function CarouselImage({ index, currentSlide, img, imgMob }) {
     )
 }
 
-const Carousel = () => {
+const Carousel = ({ sliderData }) => {
     const [currentSlide, setCurrentSlide] = React.useState(0);
 
     const length = sliderData.length

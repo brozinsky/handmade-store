@@ -22,7 +22,7 @@ const Summary = () => {
         { name: 'Suma', value: 0 },
     )
 
-    const [deliveryPrice, setDeliveryPrice] = React.useState(
+    const [deliveryPrice,] = React.useState(
         { name: 'Dostawa', value: 10 }
     )
 
@@ -44,7 +44,7 @@ const Summary = () => {
     React.useEffect(() => {
         let total = sumPrice.value + deliveryPrice.value
         setTotalPrice(prevState => ({ ...prevState, value: total }))
-    }, [sumPrice.value])
+    }, [sumPrice.value, deliveryPrice.value])
 
     return (
         <>

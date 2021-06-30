@@ -1,13 +1,13 @@
 import React from 'react'
 import Summary from './Summary'
 import CartDetails from './CartDetails'
-import Delivery from './Delivery'
+// import Delivery from './Delivery'
 import './Cart.scss'
 import LogoMobile from '../LogoMobile'
 import { CartContext } from '../../contexts/CartContext';
 
 const Cart = () => {
-    const [cart, setCart] = React.useContext(CartContext)
+    const [cart,] = React.useContext(CartContext)
 
     return (
         <>

@@ -14,15 +14,14 @@ import { ProductDataContext } from './contexts/ProductDataContext';
 
 function App() {
   const location = useLocation();
-  const [productData, setProductData] = React.useContext(ProductDataContext)
-  const { loading, data } = useQuery(GET_PRODUCTS)
+  const [, setProductData] = React.useContext(ProductDataContext)
+  const { data } = useQuery(GET_PRODUCTS)
 
   React.useEffect(() => {
     if (data) {
       setProductData(data.products_products)
-      console.log(data)
     }
-  }, [data])
+  }, [data, setProductData])
 
   return (
     <>

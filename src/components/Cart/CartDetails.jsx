@@ -9,13 +9,15 @@ const CartDetails = () => {
     const [cart,] = React.useContext(CartContext)
     return (
         <table className="table">
-            <tr className="table__tr">
-                <th className="table__th-2"></th>
-                <th className="table__th-1">Produkt</th>
-                {tableContent.map((title, index) => {
-                    return <th className="table__th" key={index}>{title}</th>
-                })}
-            </tr>
+            <tbody>
+                <tr className="table__tr">
+                    <th className="table__th-2"></th>
+                    <th className="table__th-1">Produkt</th>
+                    {tableContent.map((title, index) => {
+                        return <th className="table__th" key={index}>{title}</th>
+                    })}
+                </tr>
+            </tbody>
             {cart.map(({ color, count, id, name, price }, index) => {
                 return <ProductInCart color={color}
                     name={name}
