@@ -20,9 +20,11 @@ const Product = ({ name, price, id, colors, images }) => {
                 <Link to={`/sklep/${id}`}
                     href="./sklep/produkt"
                     className="product__info-name">{name}</Link>
-                <QueueProductsProvider>
+                <div className="product__info-price">{price},00 zł</div>
+
+                {/* <QueueProductsProvider>
                     <ProductForm colors={colors} id={id} name={name} price={price} />
-                </QueueProductsProvider>
+                </QueueProductsProvider> */}
             </div>
         </div >
     )

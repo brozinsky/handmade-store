@@ -56,12 +56,12 @@ $main-dark: #7E696C;
 }
 
 .product{
-    margin: 1rem 1rem;
+    margin: 0.5rem ;
     background: #fff;
     border-radius: 2px;
     display: inline-block;
     position: relative;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.1), 0 2px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.07), 0 1px 1px rgba(0,0,0,0.07);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -111,15 +111,15 @@ $main-dark: #7E696C;
     &__info{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
         width: 280px;
-
 
         &-name{
             margin: 0.5rem 0;
-            text-align: center;
-            font-size: 1.3rem;;
+            text-align: left;
+            font-size: 1rem;
+            color: #5f5f5f;
 
         &:hover{
             cursor: pointer;
@@ -127,11 +127,11 @@ $main-dark: #7E696C;
 
         }
         &-price{
-            margin: 0.5rem 0;
+            margin:  0;
+            font-size: 1rem;
 
             &-container{
                 text-align: center;
-
             }
         }
         &-button{

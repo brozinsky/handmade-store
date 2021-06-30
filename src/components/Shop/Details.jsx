@@ -11,7 +11,7 @@ import { ZoomContext } from '../../contexts/ZoomContext'
 import { QueueProductsProvider } from '../../contexts/QueueProductsContext'
 
 const Details = () => {
-    const [isZoomed, setIsZoomed] = React.useContext(ZoomContext)
+    const [isZoomed,] = React.useContext(ZoomContext)
     const { id } = useParams()
     const currentProduct = productsData.find(item => item.id === id)
 

@@ -5,20 +5,24 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from "react-router-dom"
 import { CategoryProvider } from './contexts/CategoryContext'
-// import { QueueProductsProvider } from './contexts/QueueProductsContext'
 import { CartProvider } from './contexts/CartContext'
+import { ProductDataProvider } from './contexts/ProductDataContext'
+import { ApolloProvider } from '@apollo/client'
+import client from './apollo'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter >
-      <CategoryProvider>
-        <CartProvider>
-          {/* <QueueProductsProvider> */}
-          <App />
-          {/* </QueueProductsProvider> */}
-        </CartProvider>
-      </CategoryProvider>
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <BrowserRouter >
+        <ProductDataProvider>
+          <CategoryProvider>
+            <CartProvider>
+              <App />
+            </CartProvider>
+          </CategoryProvider>
+        </ProductDataProvider>
+      </BrowserRouter>
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

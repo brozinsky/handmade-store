@@ -1,13 +1,15 @@
 import React from 'react'
 import Product from './Product'
 import FilterPanel from './FilterPanel'
+// import ProductLoader from '../Loaders/ProductLoader'
 import './Shop.scss';
 import { ReactComponent as Zigzag } from '../../assets/zigzag.svg'
-import { productsData } from '../../data/productsData.js'
 import { CategoryContext } from '../../contexts/CategoryContext';
 import LogoMobile from '../LogoMobile'
+import { ProductDataContext } from '../../contexts/ProductDataContext';
 
 const Shop = () => {
+    const [productData,] = React.useContext(ProductDataContext)
     const [category,] = React.useContext(CategoryContext);
 
     return (
@@ -20,7 +22,7 @@ const Shop = () => {
                 <Zigzag />
                 <div className="shop__container">
                     {category === null
-                        ? productsData
+                        ? productData
                             .map(({ name, price, id, colors, images }) => {
                                 return <Product name={name}
                                     price={price}
@@ -29,7 +31,7 @@ const Shop = () => {
                                     key={id}
                                     images={images} />
                             })
-                        : productsData
+                        : productData
                             .filter(product => product.category === category)
                             .map(({ name, price, id, colors, images }) => {
                                 return <Product name={name}
