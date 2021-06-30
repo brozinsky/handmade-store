@@ -1,23 +1,19 @@
 {
   "files": {
-    "main.css": "/handmade-store/static/css/main.4e9e695c.chunk.css",
-    "main.js": "/handmade-store/static/js/main.a24f3ac5.chunk.js",
-    "main.js.map": "/handmade-store/static/js/main.a24f3ac5.chunk.js.map",
-    "runtime-main.js": "/handmade-store/static/js/runtime-main.e0008a8a.js",
-    "runtime-main.js.map": "/handmade-store/static/js/runtime-main.e0008a8a.js.map",
-    "static/js/2.e82b36bb.chunk.js": "/handmade-store/static/js/2.e82b36bb.chunk.js",
-    "static/js/2.e82b36bb.chunk.js.map": "/handmade-store/static/js/2.e82b36bb.chunk.js.map",
-    "static/js/3.116df7c7.chunk.js": "/handmade-store/static/js/3.116df7c7.chunk.js",
-    "static/js/3.116df7c7.chunk.js.map": "/handmade-store/static/js/3.116df7c7.chunk.js.map",
+    "main.css": "/handmade-store/static/css/main.c31141f9.chunk.css",
+    "main.js": "/handmade-store/static/js/main.c6f13b64.chunk.js",
+    "main.js.map": "/handmade-store/static/js/main.c6f13b64.chunk.js.map",
+    "runtime-main.js": "/handmade-store/static/js/runtime-main.14d5758e.js",
+    "runtime-main.js.map": "/handmade-store/static/js/runtime-main.14d5758e.js.map",
+    "static/js/2.fb5253aa.chunk.js": "/handmade-store/static/js/2.fb5253aa.chunk.js",
+    "static/js/2.fb5253aa.chunk.js.map": "/handmade-store/static/js/2.fb5253aa.chunk.js.map",
+    "static/js/3.078e66fc.chunk.js": "/handmade-store/static/js/3.078e66fc.chunk.js",
+    "static/js/3.078e66fc.chunk.js.map": "/handmade-store/static/js/3.078e66fc.chunk.js.map",
     "index.html": "/handmade-store/index.html",
-    "static/css/main.4e9e695c.chunk.css.map": "/handmade-store/static/css/main.4e9e695c.chunk.css.map",
-    "static/js/2.e82b36bb.chunk.js.LICENSE.txt": "/handmade-store/static/js/2.e82b36bb.chunk.js.LICENSE.txt",
+    "static/css/main.c31141f9.chunk.css.map": "/handmade-store/static/css/main.c31141f9.chunk.css.map",
+    "static/js/2.fb5253aa.chunk.js.LICENSE.txt": "/handmade-store/static/js/2.fb5253aa.chunk.js.LICENSE.txt",
     "static/media/bcg-1.37916696.svg": "/handmade-store/static/media/bcg-1.37916696.svg",
     "static/media/bcg-2.4915bba9.svg": "/handmade-store/static/media/bcg-2.4915bba9.svg",
-    "static/media/caro-1.6af42fea.png": "/handmade-store/static/media/caro-1.6af42fea.png",
-    "static/media/caro-2.9d881370.png": "/handmade-store/static/media/caro-2.9d881370.png",
-    "static/media/caro-mob-1.66fa6f02.png": "/handmade-store/static/media/caro-mob-1.66fa6f02.png",
-    "static/media/caro-mob-2.91ade351.png": "/handmade-store/static/media/caro-mob-2.91ade351.png",
     "static/media/cat-1-img.2712a4c0.png": "/handmade-store/static/media/cat-1-img.2712a4c0.png",
     "static/media/cat-2-img.b9263827.png": "/handmade-store/static/media/cat-2-img.b9263827.png",
     "static/media/cat-2-logo.70137017.svg": "/handmade-store/static/media/cat-2-logo.70137017.svg",
@@ -28,13 +24,12 @@
     "static/media/cat-5-img.752de0a0.png": "/handmade-store/static/media/cat-5-img.752de0a0.png",
     "static/media/cat-6-img.a4e93bbb.png": "/handmade-store/static/media/cat-6-img.a4e93bbb.png",
     "static/media/cat-6-logo.e60f3e3c.svg": "/handmade-store/static/media/cat-6-logo.e60f3e3c.svg",
-    "static/media/logo-big.d0bb394b.png": "/handmade-store/static/media/logo-big.d0bb394b.png",
-    "static/media/zigzag.ebbc991f.svg": "/handmade-store/static/media/zigzag.ebbc991f.svg"
+    "static/media/logo-big.72cafb1f.png": "/handmade-store/static/media/logo-big.72cafb1f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e0008a8a.js",
-    "static/js/2.e82b36bb.chunk.js",
-    "static/css/main.4e9e695c.chunk.css",
-    "static/js/main.a24f3ac5.chunk.js"
+    "static/js/runtime-main.14d5758e.js",
+    "static/js/2.fb5253aa.chunk.js",
+    "static/css/main.c31141f9.chunk.css",
+    "static/js/main.c6f13b64.chunk.js"
   ]
 }
