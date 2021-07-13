@@ -7,14 +7,16 @@ import ProductForm from './ProductForm'
 import DetailsCarousel from './DetailsCarousel'
 import DetailsZoom from './DetailsZoom'
 import { ZoomContext } from '../../contexts/ZoomContext'
+import { ProductDataContext } from '../../contexts/ProductDataContext'
 
 import { QueueProductsProvider } from '../../contexts/QueueProductsContext'
+import { PopupProvider } from '../../contexts/PopupContext'
 
 const Details = () => {
     const [isZoomed,] = React.useContext(ZoomContext)
     const { id } = useParams()
-    const currentProduct = productsData.find(item => item.id === id)
-
+    const [productData,] = React.useContext(ProductDataContext)
+    const currentProduct = productData.find(item => item.id == id)
 
     return (
         <>
@@ -28,10 +30,13 @@ const Details = () => {
                         </div>
                         <div className="details__info-container">
                             <h3 className="details__title">{currentProduct.name}</h3>
-                            <h4 className="details__price">{currentProduct.price},00 zł</h4>
+                            <h4 className="details__price">{currentProduct.price.toFixed(2)} zł</h4>
                             <QueueProductsProvider>
-                                <ProductForm colors={currentProduct.colors} id={id} name={currentProduct.name} price={currentProduct.price} />
+                                <PopupProvider>
+                                    <ProductForm colors={currentProduct.colors} id={id} name={currentProduct.name} price={currentProduct.price} />
+                                </PopupProvider>
                             </QueueProductsProvider>
+
                         </div>
                     </div>
                     <h4 className="details__text-title">Opis:</h4>

@@ -17,7 +17,7 @@ const Product = ({ name, price, id, images }) => {
                 <Link to={`/sklep/${id}`}
                     href="./sklep/produkt"
                     className="product__info-name">{name}</Link>
-                <div className="product__info-price">{price},00 zł</div>
+                <div className="product__info-price">{price.toFixed(2)} zł</div>
 
                 {/* <QueueProductsProvider>
                     <ProductForm colors={colors} id={id} name={name} price={price} />

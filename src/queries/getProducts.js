@@ -9,6 +9,7 @@ query getProducts {
       price
       colors
       category
+      description
     }
 }
 `;
