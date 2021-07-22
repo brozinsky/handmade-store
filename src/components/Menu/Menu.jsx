@@ -2,9 +2,10 @@ import React from 'react'
 import './Menu.scss'
 import logo from '../../assets/logo.png'
 import LocalMallIcon from '@material-ui/icons/LocalMall'
-import { NavLink } from "react-router-dom";
-import { CategoryContext } from '../../contexts/CategoryContext';
-import { CartContext } from '../../contexts/CartContext';
+import { NavLink } from "react-router-dom"
+import { CategoryContext } from '../../contexts/CategoryContext'
+import { CartContext } from '../../contexts/CartContext'
+import { AuthContext } from '../../contexts/AuthContext'
 
 const menuItems = [
     { name: 'Home', linkTo: `/` },
@@ -17,6 +18,7 @@ const Menu = () => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [, setCategory] = React.useContext(CategoryContext);
     const [cart,] = React.useContext(CartContext);
+    const [isLoggedIn,] = React.useContext(AuthContext)
 
     const handleBurger = () => {
         setIsOpen(current => !current)
@@ -40,7 +42,8 @@ const Menu = () => {
                     className="menu__burger-menu">
                     <span
                         className={`menu__burger
-                        ${isOpen ? 'menu__burger--open' : ''}`}></span>
+                        ${isOpen ? 'menu__burger--open' : ''}`}>
+                    </span>
                 </div>
                 <div className={`menu__container
                 ${isOpen ? 'menu__container--open' : ''}`}>
@@ -48,15 +51,32 @@ const Menu = () => {
                         ${isOpen ? 'menu__tabs--open' : ''}`}>
                         {menuItems.map(({ linkTo, name }, index) => {
                             return <li key={index} className='menu__tabs-item'>
-                                <NavLink onClick={handleCategoryReset} to={linkTo} >{name}</NavLink>
+                                <NavLink onClick={handleCategoryReset}
+                                    to={linkTo} >{name}</NavLink>
                             </li>
                         })}
                         <li className='menu__tabs-item menu__tabs-item-cart'>
-                            <NavLink onClick={handleCategoryReset} className='menu__tabs-item-cart' to={`/koszyk`} >
+                            {isLoggedIn
+                                ? <NavLink onClick={handleCategoryReset}
+                                    className='menu__tabs-item-user'
+                                    to={`/admin`} >
+                                    Konto
+                                </NavLink>
+                                : <NavLink onClick={handleCategoryReset}
+                                    className='menu__tabs-item-user'
+                                    to={`/login`} >
+                                    Zaloguj
+                                </NavLink>}
+                        </li>
+                        <li className='menu__tabs-item menu__tabs-item-cart'>
+                            <NavLink onClick={handleCategoryReset}
+                                className='menu__tabs-item-cart'
+                                to={`/koszyk`} >
                                 <LocalMallIcon />
                                 <div className="menu__tabs-item-quantity">{cart.length}</div>
                             </NavLink>
                         </li>
+
                     </ul>
                 </div>
             </div>

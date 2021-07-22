@@ -5,8 +5,6 @@ import { QueueProductsContext } from '../../contexts/QueueProductsContext';
 import { CartContext } from '../../contexts/CartContext';
 import { PopupContext } from '../../contexts/PopupContext';
 
-
-
 const ProductForm = ({ colors, name, price, id }) => {
     const [queueProducts, setQueueProducts] = React.useContext(QueueProductsContext)
     const [, setCart] = React.useContext(CartContext)
@@ -14,7 +12,6 @@ const ProductForm = ({ colors, name, price, id }) => {
 
     const handleChange = (e) => {
         setQueueProducts(prevState => ({ ...prevState, count: e.target.value }))
-        console.log(queueProducts)
     }
 
     const handleSubmit = (e) => {

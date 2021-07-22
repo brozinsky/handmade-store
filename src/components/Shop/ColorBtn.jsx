@@ -5,7 +5,6 @@ const ColorBtn = ({ color, id, name, price }) => {
     const [queueProducts, setQueueProducts] = React.useContext(QueueProductsContext)
 
     const handleChange = () => {
-        console.log(queueProducts)
         if (color !== queueProducts.color) {
             setQueueProducts(prevState => ({ ...prevState, id, name, price, color: color }))
         }

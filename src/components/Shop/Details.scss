@@ -43,6 +43,12 @@ $main-dark: #7E696C;
             margin: 0 0.5rem;
             border: 1px rgb(175, 175, 175) solid;
             color: rgb(175, 175, 175);
+
+            &:hover{
+                color: #000;
+                border: 1px rgb(0, 0, 0) solid;
+                cursor: pointer;
+            }
         }
     }
 
