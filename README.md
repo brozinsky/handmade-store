@@ -4,7 +4,7 @@
 
 ![main-gif](doc/main.gif)
 
-A simple e-commerce static website. 
+A simple e-commerce website. 
 App has a cart to add/remove items, it shows the total price and sends user to checkout.
 It also includes admin-only features like adding and removing products.
 Loading of products made with GraphQL, data storage using Heroku and Hasura. 
